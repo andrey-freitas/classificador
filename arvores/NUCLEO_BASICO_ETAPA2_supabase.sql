@@ -2,19 +2,13 @@
 -- Gerado a partir de arvores/NUCLEO_BASICO_CORRIGIDO_ETAPA2.md
 -- 15 disciplinas, 98 assuntos, 361 subassuntos
 --
--- Cria a família ENGBAS (Núcleo Básico) em taxonomia._familias, seguindo a convenção ENGxxx já usada,
--- e vincula as 15 disciplinas a ela.
+-- Vincula as 15 disciplinas à família já existente COMUM ("Núcleo Comum Engenharias") em taxonomia._familias.
 -- O script é idempotente (upsert por chave primária) e roda em uma única transação.
 
 begin;
 
-insert into taxonomia._familias (familia_id, name, forma_reduzida)
-values ('ENGBAS', 'Núcleo Básico de Engenharia', 'Núcleo Básico')
-on conflict (familia_id) do update
-  set name = excluded.name, forma_reduzida = excluded.forma_reduzida;
-
 insert into taxonomia.disciplinas (disciplina_id, familia_id, name, ordem, ativo)
-select d.disciplina_id, 'ENGBAS', d.name, d.ordem, true
+select d.disciplina_id, 'COMUM', d.name, d.ordem, true
 from (values
   ('ALG_LIN', 'Álgebra Linear', 1),
   ('CAL_DIF', 'Cálculo Diferencial e Integral', 2),
