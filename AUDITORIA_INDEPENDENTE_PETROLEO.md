@@ -1,12 +1,18 @@
 # AUDITORIA INDEPENDENTE — ÁRVORE MESTRA DE ENGENHARIA DE PETRÓLEO
 
 **Auditor:** independente (não autor da árvore).  
-**Data:** 2026-09-04.  
-**Objetos auditados:** `PETROLEO.md` (Parte I + 52 `PET_FRONT`) e `MAPEAMENTO_PETROLEO.json` (1.354 registros).  
-**Referências carregadas:** `NUCLEO_BASICO.md` (PR #2, `arvores/NUCLEO_BASICO_CORRIGIDO_ETAPA2.md`) e `ENGENHARIA_PRODUCAO.md` (PR #3, só estilo/convenção da Parte II).  
-**Não carregado:** `00_ENTRADA_ESPECIFICAS.jsonl` — o arquivo não estava no pacote da auditoria (anexos efetivos: árvore + mapeamento). Sem `nucleo_cobrado` a seção B não é certificável.
+**Data:** 2026-09-04 (2ª passagem — corpus `00_ENTRADA_ESPECIFICAS.jsonl` agora no pacote).  
+**O que este relatório não faz:** não reconstrói a árvore, não reclassifica o corpus, não reabre a regra 7, não julga pelo nome da prova nem pelo rótulo preliminar da ENTRADA.
 
-**O que este relatório não faz:** não reconstrói a árvore, não reclassifica o corpus, não reabre as decisões da regra 7, não julga pelo nome da prova nem pelo rótulo preliminar.
+| Papel | Arquivo | SHA-256 |
+|---|---|---|
+| Árvore | `PETROLEO.md` | `abaf64c9d891d11882b3b6a57cdee4b357d98af1f974b09144a9a0bea31dc185` |
+| Mapeamento | `MAPEAMENTO_PETROLEO.json` | `7e6794e2c94f6d2671120de8412d0fe3b457edde49990a59e16cb82c44d0e8da` |
+| Corpus | `00_ENTRADA_ESPECIFICAS.jsonl` | `e3396d3498c52e7c8885e77f155a0fb53db90af1410dafce6423fd6e38b0e056` (1.354 linhas) |
+| Núcleo Básico | `NUCLEO_BASICO.md` | `43f71eee951357922561a77879accbad437b4a698725712aacb7d1e6da9b4cef` |
+| Estilo (não conteúdo) | `PRODUCAO.md` | árvore congelada de Engenharia de Produção |
+
+Evidência de conteúdo = somente `nucleo_cobrado`. Os **1.342** núcleos em árvore foram lidos, agrupados pelos 262 subassuntos. Contestação só conta se cita regra/FRONT **e** o destino proposto existe (folha da Parte I, id do Núcleo Básico, ou `I`).
 
 ---
 
@@ -14,23 +20,21 @@
 
 **Veredito: NÃO CONGELÁVEL.**
 
-Não se congela uma árvore de classificação cuja alocação (a parte que importa) não pôde ser lida contra o `nucleo_cobrado`. O mapeamento é mecanicamente coerente com a Parte I, as 12 saídas batem com os exemplos da Parte II, e as decisões de escopo da regra 7 estão *estruturalmente* aplicadas. Isso não substitui B.
+B agora é certificável. Contestações válidas: **16 altas / 9 médias / 7 baixas** (32 itens, 2,4% dos 1.342 em árvore). As 12 saídas oficiais estão corretas. Três nomes gênero-sobre-espécie e a ordem alfabética (Unicode vs folding da Produção) continuam abertos.
 
-Achados por severidade (só o que viola regra citada, com evidência):
-
-| Severidade | N | O que conta |
+| Severidade | N | Critério |
 |---|---|---|
-| Alta (disciplina errada) | 0 | Nenhuma contestação de alocação certificável |
-| Média (assunto/subassunto guarda-chuva ou colisão de nome) | 3 | `GEOF_02_003`, `RESERV_03_004`, `POCO_03_004` |
-| Baixa (mecânica / granularidade / fronteira faltante) | 15 | 11 grupos fora da ordem alfabética da casa; 1 destino BASICAS em nível de assunto; 3 pares sem `PET_FRONT` |
+| Alta (disciplina errada ou deveria ser I/BASICAS) | 16 | 9→I; 2 GEO→RESERV; 1 GEO→COMERC; 1 INS_MAR→POCO; 1 REGUL→COMERC; 1 REGUL→SEG_PRO; 1 ELE_ESC→INS_SUB |
+| Média (assunto errado, disciplina certa) | 9 | 7× Q58 OBJETIVA em `REGUL_06_001`; Mosqueiro; EOR no PDP |
+| Baixa (sub vizinho mais específico) | 7 | depleção; 2× EOR misto; acidificação; SGSO; esquemas de refino; play |
 
 Três achados mais importantes:
 
-1. **B não executado.** `00_ENTRADA_ESPECIFICAS.jsonl` ausente. Contestações válidas de alocação = 0, não porque a alocação esteja aprovada, mas porque a regra do auditor (“só o `nucleo_cobrado` é evidência”) não tem o que ler. Congelar agora seria assinar um corpus não visto.
-2. **Três subassuntos guarda-chuva na mesma família do vizinho** (regra 1 e regra 2): `GEOF_02_003` Inversão Sísmica colide com `GEOF_02_001` Análise AVO e Inversão Elástica; `RESERV_03_004` Mecanismos Primários de Produção cobre o irmão `RESERV_03_003` Mecanismo de Gás em Solução; `POCO_03_004` Métodos de Estimulação cobre Acidificação e Fraturamento.
-3. **Ordem alfabética** (checagem A): 2 assuntos e 9 grupos de subassuntos ordenados por *codepoint Unicode* (Á/Í no fim, “CAPEX” antes de “Cadeia”). A árvore congelada de Produção usa folding de acentos e case-insensitive e está 0/0. Ou se reordena com de-para de IDs, ou se documenta a chave Unicode na Parte II.
+1. **Nove itens em árvore deveriam ser `I`** (`PET_FRONT_004`, regras 4 e 6): cinco `prova_gab` de teoria do Estado regulador/captura em `REGUL_04_002`; três certames genéricos (inexigibilidade, justificativa de contratação direta, homologação) em `REGUL_04_005`; interpolação IDW/Spline em GIS sem âncora petrolífera em `GEO_04_002`.
+2. **Sete altas de disciplina** com FRONT explícita: fluxo/alocação em fratura em `GEO_04_004` (FRONT_006); avaliação econômico-financeira de E&P em GEO (FRONT_010); jack-up em `INS_MAR_02_002` (FRONT_023); papel do distribuidor (FRONT_042); classe técnica de GLP (FRONT_002 / regra 5); ILI/pig de integridade em `ELE_ESC_03_003` (FRONT_025).
+3. **Três folhas gênero** cujas irmãs já são a espécie — `GEOF_02_003` Inversão Sísmica vs `GEOF_02_001` Inversão Elástica; `RESERV_03_004` Mecanismos Primários vs `RESERV_03_003` Gás em Solução; `POCO_03_004` Métodos de Estimulação vs acidificação/fratura — mais 2 assuntos e 9 grupos de subassuntos fora do folding NFD da Produção.
 
-**O que já está sólido:** 16 / 77 / 262 como anunciado; 1.354 IDs únicos no mapeamento; 1.342 destinos existem na árvore; 4 destinos BASICAS existem no Núcleo Básico; 0 lacuna de numeração; 0 nome repetido; `PET_FRONT_001`–`052` contínuos; siglas da Parte II resolvem nas duas árvores; 0 subassunto vazio (regra 8); regra 7 visível na estrutura; SUST (16) e QUI_PET (18) se sustentam; as 8 saídas `I` repetem os três exemplos de `PET_FRONT_004`.
+Alocação sem contestação válida: **97,6%** dos 1.342. COMERC, GEOF, PETROF, INS_SUB, PROC_PRI, PRJ, QUI_PET e SUST: zero contestação válida.
 
 ---
 
@@ -38,204 +42,257 @@ Três achados mais importantes:
 
 ### Método
 
-Parser da Parte I de `PETROLEO.md` (corte em `# PARTE II`) e da Parte I de `NUCLEO_BASICO.md`. Cruzamento campo a campo com os 1.354 registros de `MAPEAMENTO_PETROLEO.json`. Ordem alfabética = folding NFD + `casefold` (a mesma chave que deixa Produção com 0 violações). Siglas da Parte II = todos os tokens `` `SIGLA` ``, excluídos os rótulos auxiliares `BASICAS`, `TECNICA`, `NORMAS`, `I`.
-
-`00_ENTRADA_ESPECIFICAS.jsonl` não estava no pacote: a bijeção ENTRADA ↔ MAPEAMENTO **não** foi conferida. Conferiu-se só a consistência interna do mapeamento.
+Parser da Parte I de `PETROLEO.md` (corte em `# PARTE II`) e da Parte I de `NUCLEO_BASICO.md`. Join campo a campo dos 1.354 `id_global` de `MAPEAMENTO_PETROLEO.json` com as 1.354 linhas de `00_ENTRADA_ESPECIFICAS.jsonl`. Ordem alfabética = `unicodedata.normalize("NFD")` + strip de combining + `casefold` (a chave que deixa Produção com 0 violações de assunto/subassunto). Siglas da Parte II = tokens `` `SIGLA` ``, excluídos `BASICAS`, `TECNICA`, `NORMAS`, `I`.
 
 ### Números
 
 | Checagem | Resultado |
 |---|---|
-| Disciplinas / assuntos / subassuntos na Parte I | **16 / 77 / 262** (bate com o anunciado) |
-| Registros no mapeamento | **1.354** (`meta.quantidade` = 1.354) |
-| `id_global` únicos | **1.354** (0 duplicata) |
-| Bijeção com ENTRADA | **não conferida** (arquivo ausente) |
+| Disciplinas / assuntos / subassuntos | **16 / 77 / 262** |
+| ENTRADA linhas / `id_global` únicos | **1.354 / 1.354** |
+| Mapeamento registros / únicos | **1.354 / 1.354** |
+| Bijeção ENTRADA ↔ MAPEAMENTO | **1.354 = 1.354** (0 órfão, 0 mapeado-sem-entrada) |
+| `nucleo_cobrado` vazio | **0** |
 | Dentro da árvore / BASICAS / I | **1.342 / 4 / 8** |
 | Destinos in-tree inexistentes na Parte I | **0** |
-| Destinos BASICAS inexistentes no Núcleo Básico | **0** |
-| Nome de assunto/subassunto no mapeamento ≠ árvore | **0** |
+| Destinos BASICAS inexistentes no Núcleo | **0** |
+| `nome_assunto` / `nome_subassunto` ≠ árvore | **0** |
 | Filho cujo ID não prefixa o pai | **0** |
 | Lacunas de numeração em assunto ou subassunto | **0** |
-| Nome de assunto ou subassunto repetido (exato ou folded) | **0** |
-| Ordem alfabética (folding) — assuntos | **2** disciplinas |
-| Ordem alfabética (folding) — subassuntos | **9** pais |
-| `PET_FRONT_001` … `052` contínuos, sem duplicata | **sim** (52/52) |
+| ID duplicado / nome duplicado (exato) no mesmo pai | **0 / 0** |
+| Nome de assunto ou subassunto repetido na árvore | **0** |
+| Folha vazia hoje (regra 8) | **0** |
+| `PET_FRONT_001` … `052` contínuos | **sim** (52/52) |
 | Sigla da Parte II sem destino nas duas árvores | **0** (`MEC_FLU_07` existe como assunto) |
+| Ordem folding — disciplinas (nomes PT) | **fora** (a Parte I está por **sigla**) |
+| Ordem folding — assuntos | **2** pais (`GEO`, `PROC_PRI`) |
+| Ordem folding — subassuntos | **9** pais |
+| Ordem Unicode codepoint — assuntos / subassuntos | **0 / 0** (filhos já estão em codepoint) |
 
-Disciplinas, pela sigla: COMERC, ELE_ESC, GEO, GEOF, INS_MAR, INS_SUB, PETROF, POCO, PRJ, PROC_PRI, QUI_PET, REF_GAS, REGUL, RESERV, SEG_PRO, SUST.
+Disciplinas, pela sigla: COMERC (48), ELE_ESC (54), GEO (261), GEOF (119), INS_MAR (25), INS_SUB (58), PETROF (74), POCO (113), PRJ (41), PROC_PRI (54), QUI_PET (18), REF_GAS (38), REGUL (235), RESERV (159), SEG_PRO (29), SUST (16).
 
 ### Achados
 
-**A1. Bijeção com ENTRADA não conferida.**  
-Evidência: o pacote da auditoria continha `PETROLEO.md` e `MAPEAMENTO_PETROLEO.json`. Sem o JSONL, não há como afirmar que todo `id_global` da ENTRADA aparece exatamente uma vez. O mapeamento, *por si*, tem 1.354 IDs únicos e nenhum órfão interno.
+**A1. Bijeção conferida.** Todo `id_global` da ENTRADA aparece exatamente uma vez no mapeamento.
 
-**A2. Ordem alfabética fora da convenção da casa (regra A / estilo PRODUCAO).**  
-Produção: 0 assuntos e 0 subassuntos fora do folding. Petróleo usou ordenação Unicode (`Á` depois de Z; `A` maiúsculo antes de `a`).
+**A2. IDs e cobertura íntegros.** Nenhuma lacuna `_NNN`, nenhum destino fantasma, nenhum nome colidente.
+
+**A3. Ordem alfabética fora da convenção da casa (estilo Produção).** Produção: 0 assuntos e 0 subassuntos fora do folding. Petróleo ordena filhos por **codepoint Unicode** (`Á` depois de Z; `CAPEX` antes de `Cadeia`) e disciplinas por **sigla** (Geologia antes de Geofísica; Gestão de Projetos `PRJ` entre Poços e Processamento).
 
 Assuntos:
 
 | Pai | Ordem atual | Ordem folding |
 |---|---|---|
-| `GEO` | … Geologia **Estrutural**, Geologia **de Reservatórios** … | Geologia **de Reservatórios**, Geologia **Estrutural** |
-| `PROC_PRI` | … Tratamento de **Gás** Natural, Tratamento de **Água** Produzida … | Tratamento de **Água** Produzida, Tratamento de **Gás** Natural |
+| `GEO` | Geologia **Estrutural**, Geologia **de Reservatórios e Operações** | de Reservatórios, Estrutural |
+| `PROC_PRI` | Tratamento de **Gás** Natural, Tratamento de **Água** Produzida | Água, Gás |
 
-Subassuntos:
+Subassuntos (9 pais): `COMERC_03` (CAPEX vs Cadeia); `ELE_ESC_04` (Índice depois de Sistema Integrado); `GEO_07` (Bacias Interiores vs Bacias do Norte); `INS_MAR_03` (Água de Injeção no fim); `INS_SUB_01` (Árvore de Natal no fim); `INS_SUB_04` (Instalação de Árvore depois de Manifolds); `RESERV_04` (Injeção de Água depois de Injeção de Gás); `RESERV_05` (Cálculo Volumétrico depois de Curvas de Declínio); `SEG_PRO_01` (Áreas Classificadas no fim).
 
-| Pai | Sintoma |
-|---|---|
-| `COMERC_03` | `CAPEX, OPEX e Lifting Cost` antes de `Cadeia de Valor e Logística` |
-| `ELE_ESC_04` | `Sistema Integrado de Produção` antes de `Índice de Produtividade` |
-| `GEO_07` | `Bacias Interiores Paleozoicas` antes de `Bacias do Norte e Nordeste` |
-| `INS_MAR_03` | `Água de Injeção` por último |
-| `INS_SUB_01` | `Árvore de Natal Molhada` por último |
-| `INS_SUB_04` | `Instalação de Manifolds` antes de `Instalação de Árvore de Natal Molhada` |
-| `RESERV_04` | `Injeção de Gás e WAG` antes de `Injeção de Água` |
-| `RESERV_05` | `Classificação de Reservas e Recursos` antes de `Cálculo Volumétrico` |
-| `SEG_PRO_01` | `Áreas Classificadas e Contenção` por último |
-
-Não é preferência estética: a checagem A pede ordem alfabética dentro do pai, e a árvore de referência a cumpre com folding.
-
-**A3. Destino BASICAS em nível de assunto, não de subassunto.**  
-`2022_FGV_Analista_de_pesquisa_energetica_petroleo-exploracao_e_producao_PROVA__PASSADA_01__QQuestão Discursiva 1` → `ENG_ECO_01` (assunto “Análise de Investimentos”). Os outros três BASICAS apontam subassunto (`TERMOD_03_001`, `MEC_FLU_07_001`, `MEC_FLU_07_002`). `ENG_ECO_01` *existe* no Núcleo Básico; a checagem “destino existe” passa. A Parte II exige id canônico, não exige folha. Inconsistência de granularidade, não id órfão.
+Congelar exige remapear IDs à ordem folding **ou** documentar na Parte II que Petróleo usa Unicode/sigla, não NFD-fold.
 
 ---
 
-## B. Alocação de questões
+## B. Alocação (1.342 núcleos)
 
 ### Método
 
-O protocolo pedia: para cada uma das 1.342 questões in-tree, ler o `nucleo_cobrado` e testar o subassunto contra as regras 1, 4, 5 e 7. Sem amostra.
-
-**Arquivo `00_ENTRADA_ESPECIFICAS.jsonl` não foi fornecido.** O mapeamento não carrega `nucleo_cobrado` (chaves: `id_global`, `disciplina`, `assunto`, `subassunto`, `nome_assunto`, `nome_subassunto`). Julgar pelo `id_global` (nome da prova) ou pelo rótulo preliminar é proibido. “Eu teria colocado em outro lugar” não é achado.
+Join `id_global` → `subassunto` → `nucleo_cobrado`. Leitura exaustiva por folha (262 grupos). Contestação só se o núcleo **contradiz** o destino + FRONT/regra aplicável, **e** o destino correto existe. “Eu teria colocado em outro lugar” não conta.
 
 ### Números
 
-| Métrica | Valor |
+| | N |
 |---|---|
-| Questões in-tree | 1.342 |
-| `nucleo_cobrado` lidos | **0** |
-| Contestações válidas (alta / média / baixa) | **0 / 0 / 0** |
-| Contestações por disciplina | — |
+| Núcleos lidos em árvore | **1.342 / 1.342** |
+| Contestações válidas | **32** (16 / 9 / 7) |
+| Sem contestação válida | **1.310** (97,6%) |
 
-### Achados
+Por disciplina de origem (mapeamento atual):
 
-**B1. Seção B não certificada.**  
-Não há contestação válida porque não há evidência lícita. Isso **não** é aprovação da alocação. Qualquer lista de “erros prováveis” a partir do nome da prova ou do nome do nó seria violação da regra do auditor e foi omitida.
-
-A tabela consolidada de contestações ao final está vazia de propósito.
-
----
-
-## C. Saídas (12 fora da árvore) e vazamentos
-
-### Método
-
-As 12 saídas trazem, em `nome_subassunto`, um rótulo de conteúdo escrito pelo mapeador. Isso **não** é `nucleo_cobrado`; é a melhor evidência disponível *sobre as saídas*. Confrontou-se esse rótulo com `PET_FRONT_001`, `004`, `016`, `039`, `044`, `052` e com os IDs do Núcleo Básico. Para vazamento inverso (in-tree que deveria ter saído), sem `nucleo_cobrado` não há contestação válida — só inspeção estrutural da regra 7.
-
-### Números
-
-| Classe | N | Destinos |
-|---|---|---|
-| `I` | 8 | rótulo `I` |
-| `BASICAS` | 4 | `TERMOD_03_001`, `ENG_ECO_01`, `MEC_FLU_07_001`, `MEC_FLU_07_002` |
-| Saídas cujo rótulo contradiz `PET_FRONT_004` / `001` | **0** |
-| Questões in-tree contestadas para BASICAS ou I | **0** (B não executado) |
-
-### As 8 saídas I — corretas pelo rótulo
-
-Todas repetem os três exemplos canônicos de `PET_FRONT_004`. Não se forçou destino aproximado (regra 6).
-
-| id_global | rótulo no mapeamento | Regra |
-|---|---|---|
-| `2008_ESPECIALISTA EM REGULACAO DE PETROLEO E DERIVADOS_2-PROVA __PASSADA_01__Q38` | regime de servidores de agências | `PET_FRONT_004` |
-| `2008_ESPECIALISTA EM REGULACAO DE PETROLEO E DERIVADOS_2-PROVA __PASSADA_01__Q39` | regime de servidores de agências | `PET_FRONT_004` |
-| `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Gestao-de-Projetos-e-Contratos-em-Oleo-e-Gas-11-12-2025__PASSADA_01__Q48` | governança de TI | `PET_FRONT_004` |
-| `prova_gab__PASSADA_01__Q36` | Lei de Concessões de serviços públicos (8.987) | `PET_FRONT_004` |
-| `prova_gab__PASSADA_01__Q37` | idem | `PET_FRONT_004` |
-| `prova_gab__PASSADA_01__Q40` | idem | `PET_FRONT_004` |
-| `prova_gab__PASSADA_01__Q44` | idem | `PET_FRONT_004` |
-| `prova_gab__PASSADA_01__Q45` | idem | `PET_FRONT_004` |
-
-Nenhuma das oito deveria entrar na árvore de Petróleo com o rótulo que o mapeamento declara.
-
-### As 4 saídas BASICAS — saída correta; um destino interno discutível
-
-| id_global | Destino | Rótulo | Saída para Básicas? | Nota |
+| Disc | n | Alta | Média | Baixa |
 |---|---|---|---|---|
-| `2008_…_Q48` | `TERMOD_03_001` Diagramas de Fases | equilíbrio de fases: azeótropo etanol-água | **Sim** (`PET_FRONT_016` / `039`: azeótropo sem contexto de refino/reservatório → `TERMOD`) | Dentro das Básicas, `TERMOD_03_002` Lei de Raoult e Pontos de Bolha e Orvalho é o vizinho mais específico do azeótropo. Observação de folha, não de árvore de Petróleo. |
-| `2022_FGV_…_QQuestão Discursiva 1` | `ENG_ECO_01` | Análise de Investimentos | **Sim** (`PET_FRONT_044`: VPL/TIR sem risco geológico → `ENG_ECO`) | Destino = assunto, não folha (A3). |
-| `prova_gab__PASSADA_01__Q46` | `MEC_FLU_07_001` | Outros Medidores de Vazão | **Sim, se o objeto é o princípio físico** (`PET_FRONT_052`) | Se o `nucleo_cobrado` (não lido) for RTM/ponto fiscal, o destino seria `REGUL_05`. Sem `nucleo_cobrado`, não se contesta. |
-| `prova_gab__PASSADA_01__Q65` | `MEC_FLU_07_002` | Placa de Orifício | idem | idem |
+| REGUL | 235 | 10 | 7 | 0 |
+| GEO | 261 | 4 | 1 | 1 |
+| RESERV | 159 | 0 | 1 | 3 |
+| INS_MAR | 25 | 1 | 0 | 0 |
+| ELE_ESC | 54 | 1 | 0 | 0 |
+| POCO | 113 | 0 | 0 | 1 |
+| SEG_PRO | 29 | 0 | 0 | 1 |
+| REF_GAS | 38 | 0 | 0 | 1 |
+| COMERC, GEOF, PETROF, INS_SUB, PROC_PRI, PRJ, QUI_PET, SUST | 428 | 0 | 0 | 0 |
 
-### Vazamento inverso (in-tree → Básicas ou I)
+### B1 — Altas (16)
 
-**Nenhuma contestação válida.** Inspeção estrutural (não é achado de alocação): a árvore *reserva* nós para fenômenos que as Básicas também têm, exatamente como `PET_FRONT_001` manda — `RESERV_02_003` Lei de Darcy (9 questões), `GEOF_03_001` Cinemática da Reflexão (6), `POCO_04_003` Janela Operacional e Geopressões (7), `RESERV_05_001` Análise de Incertezas (contexto de reservas). Isso é aplicação da regra 4/7, não vazamento.
+#### B1.1 Cinco teorias genéricas de regulação em `REGUL_04_002` → `I` (`PET_FRONT_004`, regra 6)
+
+IDs: `prova_gab__PASSADA_01__Q38`, `…Q39`, `…Q41`, `…Q42`, `…Q43`.
+
+Núcleos: Estado regulador vs provedor; função reguladora vs regulamentar; autonomia da agência; captura por interesses privados; espécies de captura. Nenhum trecho de petróleo, ANP, CNPE ou energia. `PET_FRONT_004`: “qualquer direito ou administração genéricos. Não forçar um destino aproximado.” A mesma série `prova_gab` já mandou Lei 8.987 para I. A folha `REGUL_04_002` (Estado Regulador e Agências, n=5) esvazia → regra 8.
+
+#### B1.2 Três certames genéricos em `REGUL_04_005` → `I` (`PET_FRONT_004`, regra 6)
+
+- `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Gestao-de-Projetos-e-Contratos-em-Oleo-e-Gas-11-12-2025__PASSADA_01__Q41` — justificativa de preço e de escolha do fornecedor na contratação direta.
+- `…__Q43` — exclusividade de fornecedor como requisito da inexigibilidade.
+- `…__Q51` — homologação/revogação como fase final do certame.
+
+Nenhum núcleo cita Petrobras, Lei 13.303 nem petróleo. `PET_FRONT_045` reserva REGUL para o regime jurídico da estatal; sem essa âncora, FRONT_004 manda `I`. **Não contestado** o gêmeo `…__Q30` (auditores independentes das demonstrações): FRONT_045 (“governança e auditoria de estatais”) cobre.
+
+#### B1.3 `2010-epe-analista-de-pesquisa-energetica-petroleo-exploracao-prova__PASSADA_01__Q24` em `GEO_04_002` → `I` (regras 4 e 6)
+
+Núcleo: algoritmos IDW e Spline como interpolação espacial em SIG. Sem âncora de E&P. Não há folha de GIS no Núcleo Básico. Geoestatística da folha é krigagem/variograma, não IDW.
+
+#### B1.4 Dois fluxos em fratura / alocação injetor-produtor em `GEO_04_004` → `RESERV_06_001` (`PET_FRONT_006`, regra 7)
+
+- `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Geologia-de-Exploracao-11-12-2025__PASSADA_01__Q36` — orientação e condutividade da rede de fraturas na **modelagem de fluxo** e **alocação de poços**.
+- `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Geologia-de-Reservatorios-11-12-2025__PASSADA_01__Q41` — fraturas condutivas ou selantes na modelagem e **otimização de produtores e injetores**.
+
+`GEO_04_004` é “Reservatórios Fraturados” (estático). FRONT_006: simulação de fluxo / gerenciamento a partir do modelo = Reservatórios. Destino: `RESERV_06_001` Gerenciamento de Reservatórios. A folha geológica (n=2) esvazia → regra 8.
+
+#### B1.5 `2010-epe-analista-de-pesquisa-energetica-petroleo-exploracao-prova__PASSADA_01__Q40` em `GEO_01_003` → `COMERC_03_003` (`PET_FRONT_010`)
+
+Núcleo: integração de riscos **geológicos, econômicos e financeiros** na **avaliação de projetos** de E&P. FRONT_010: decisão econômico-financeira = Comercialização. Gêmeo já em `COMERC_03_003`: `2012-epe-analista-de-pesquisa-energetica-petroleo-exploracao-prova__PASSADA_01__Q46`.
+
+#### B1.6 `2005_ESPECIALISTA EM REGULACAO DE PETROLEO_1-PROVA__PASSADA_01__Q40` em `INS_MAR_02_002` → `POCO_07_002` (`PET_FRONT_023`)
+
+Núcleo: plataformas autoeleváveis (jack-up) não operam em lâmina > 200 m. FRONT_023: sonda/autoelevável = Poços (`POCO_07_002` Sondas Offshore). A folha atual é “Plataformas Fixas, Semissubmersíveis e TLP” — o jack-up nem é um desses tipos.
+
+#### B1.7 `2005_ESPECIALISTA EM REGULACAO DE PETROLEO_2-PROVA__PASSADA_01__Q41` em `REGUL_02_002` → `COMERC_03_002` (`PET_FRONT_042`)
+
+Núcleo: escopo do **distribuidor** (atacado e logística para o varejo). FRONT_042: papel de agente na cadeia comercial = Comercialização, não autorização ANP. Destino: `COMERC_03_002` Cadeia de Valor e Logística.
+
+#### B1.8 `2008_ESPECIALISTA EM REGULACAO DE PETROLEO E DERIVADOS_2-PROVA __PASSADA_01__Q58` em `REGUL_02_002` → `SEG_PRO_01_003` (`PET_FRONT_002`, regra 5)
+
+Núcleo: parâmetro **técnico** das classes de armazenamento de recipientes de GLP. Convenção TECNICA: critério de classificação de área/armazenamento fica em Segurança de Processo (`SEG_PRO_01_003`), não no marco de distribuição.
+
+#### B1.9 `2008_ESPECIALISTA EM REGULACAO DE PETROLEO E DERIVADOS_1-PROVA __PASSADA_01__Q56` em `ELE_ESC_03_003` → `INS_SUB_05_002` (`PET_FRONT_025`)
+
+Núcleo: ferramenta para detectar em operação **corrosão interna, perda de espessura e mossas** em dutos (ILI / pig instrumentado de integridade). FRONT_025: pigging como garantia de escoamento = ELE_ESC; integridade da linha = INS_SUB (`INS_SUB_05_002` Gestão de Integridade). Os outros três núcleos de `ELE_ESC_03_003` (aprisionamento de PIG, pigs de espuma/limpeza, diretrizes de passagem) permanecem.
+
+### B2 — Médias (9)
+
+#### B2.1 Sete `Q58` OBJETIVA em `REGUL_06_001` → `REGUL_07_005` (regra 1)
+
+IDs: `OBJETIVA-09-GMO09-Gerenciamento-e-Monitoramento-das-Operacoes-com-Pocos__PASSADA_01__Q58`; `OBJETIVA-10-OSS10-Operacao-de-Sistemas-Submarinos-de-Producao__PASSADA_01__Q58`; `OBJETIVA-11-PIP11-Processo-de-Individualizacao-de-Producao__PASSADA_01__Q58`; `OBJETIVA-12-IDG12-Interpretacao-de-Dados-Geofisicos__PASSADA_01__Q58`; `OBJETIVA-13-OGP13-Operacao-Geologica-em-Pocos-Exploratorios__PASSADA_01__Q58`; `OBJETIVA-14-CMR14-Caracterizacao-e-Modelagem-de-Reservatorios__PASSADA_01__Q58`; `OBJETIVA-15-MGR15-Modelagem-e-Gerenciamento-de-Reservatorios__PASSADA_01__Q58`.
+
+Núcleo: receitas/participações governamentais **devidas no regime de partilha** (Lei 12.351 art. 42: bônus e royalties — sem participação especial). `REGUL_06_001` é “Bônus e Participação Especial” (marco da concessão, Lei 9.478). O conhecimento determinante é o elenco de takes da **partilha** → `REGUL_07_005`.
+
+Não contestados os Q54 (premissas CNPE da 3ª Rodada para excedente) nem os Q55 (SGPP): cabem em `REGUL_06_002` Custo em Óleo e Excedente em Óleo.
+
+#### B2.2 `2006-epe-tecnico-de-nivel-superior-petroleo-exploracao-e-producao-prova__PASSADA_01__Q42` em `GEO_06_003` → `GEO_07_002` (regra 1)
+
+Núcleo: localizar a cozinha do Baixo de Mosqueiro no litoral/offshore **sergipano**, Bacia de Sergipe-Alagoas. Não é migração primária/secundária (`GEO_06_003`). Destino: `GEO_07_002` Bacias do Norte e Nordeste.
+
+#### B2.3 `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Engenharia-de-Instalacoes-Maritimas-11-12-2025__PASSADA_01__QQuestão 27` em `RESERV_04_001` → `RESERV_06_001` (regra 1)
+
+Núcleo: obrigatoriedade e boas práticas de incluir estudos de injeção e recuperação avançada no PDP. Não é classificação de métodos (`RESERV_04_001`). Cabe em gerenciamento do reservatório / conteúdo do plano de desenvolvimento (`RESERV_06_001`).
+
+### B3 — Baixas (7)
+
+| ID | Núcleo | Atual | Proposto | Regra |
+|---|---|---|---|---|
+| `2011-2_PETROBRAS__PASSADA_01__Q64` | depleção = queda da pressão estática média, sem gás em solução | `RESERV_03_003` | `RESERV_03_004` | 1 |
+| `OBJETIVA-15-MGR15-…__Q78` | CO₂ miscível **e** vapor cíclico **e** combustão in situ | `RESERV_04_005` | `RESERV_04_001` | 1 |
+| `2024_FGV_ANALISTA DE PESQUISAS ENERGETICAS-petroleo-exploracao-e-producao__PASSADA_01__Q41` | WAG-CO₂ **e** polímero | `RESERV_04_004` | `RESERV_04_001` | 1 |
+| `2022_FGV_Analista_de_pesquisa_energetica_petroleo-exploracao_e_producao_PROVA__PASSADA_01__Q62` | k e skin que **indicam acidificação matricial** | `POCO_03_004` | `POCO_03_002` | 1 |
+| `OBJETIVA-11-PIP11-…__Q98` | auditorias internas e de 3ª parte do **SGSO** | `SEG_PRO_02_001` | `SEG_PRO_02_002` | 1; FRONT_049 |
+| `2008_PETROBRAS_CESPE_2_PROVA__PASSADA_01__Q120` | craqueamento + reforma + alquilação | `REF_GAS_03_006` | `REF_GAS_03_004` | 1 |
+| `2024_FGV_ANALISTA DE PESQUISAS ENERGETICAS-petroleo-exploracao-e-producao__PASSADA_01__Q65` | play, bacia efetiva e segmentação de chances | `GEO_01_002` | `GEO_01_003` | 1; FRONT_010 |
+
+### B4 — Rejeitados na adjudicação (não são achados)
+
+- AOF por teste de contrapressão em `RESERV_07_004` — a folha se chama “Injetividade e Contrapressão”; FRONT_017 não manda AOF para fora com a clareza de IPR/TPR.
+- Q54/Q55 OBJETIVA em `REGUL_06_002` — premissas de excedente e SGPP (gestão de gastos da partilha) são o objeto da folha.
+- PPSA 0% de equity em `REGUL_07_005` vs `REGUL_07_003` — vizinhos igualmente defensáveis.
+- `…Gestao…__Q30` auditores das demonstrações — FRONT_045.
+- Outorga de recursos hídricos para hidroeletricidade em `REGUL_04_003` — FRONT_051 (outorga / ANEEL).
+- Play/POS com economicidade ainda em `GEO_01_003` — FRONT_010 deixa a chance geológica em GEO.
+- Modelo 3D estático como insumo de simulação em `GEO_04_003` — FRONT_006 / regra 7.
+- Parafina / pour point em `ELE_ESC_03_002` — FRONT_025.
+- CRM em `REGUL_05_002` — FRONT_052 nomeia CRM.
+- Nomenclatura de poço / poço explotatório em `REGUL_01_002` — definição ANP, não operação de poço.
+- Ciclo de vida do campo + prazo da concessão em `REGUL_01_001` — fase legal, não FEL (`PET_FRONT_047` não se aplica).
+- Jack-up **não** reaberto como seleção de unidade de produção: FRONT_023 é sonda.
+- GEOF_02_001 vs `GEOF_02_003`: AVO/ângulo vs inversão determinística/estocástica — alocação coerente; o problema é o **nome** (seção E).
 
 ---
 
-## D. Fronteiras
+## C. Saídas
 
 ### Método
 
-1. Contradição instanciada: regra diz X→A e o mapeamento põe questão X em B. Exige `nucleo_cobrado`. Não executado no nível da questão.
-2. Contradição estrutural: a *árvore* põe o tema da regra 7 no lado errado. Executado por inspeção dos IDs.
-3. Pares de subassuntos em disciplinas diferentes com sobreposição de nome/objeto e sem `PET_FRONT` cobrindo o par. Executado.
-4. `PET_FRONT` sem nó de Petróleo com questão. Executado (contagem por ID citado).
+Os 12 registros com `disciplina` `I` ou `BASICAS` no mapeamento; cada `nucleo_cobrado` contra FRONT_001, 004, 016, 039, 044, 052 e as folhas do Núcleo Básico. Varredura inversa: núcleos **em árvore** que deveriam ter saído (regras 4 e 6).
 
 ### Números
 
-| Checagem | Resultado |
-|---|---|
-| Contradições instanciadas (questão × texto da regra) | **não executado** (sem `nucleo_cobrado`) |
-| Decisões da regra 7 aplicadas na estrutura | **6/6** |
-| `PET_FRONT` cujo lado de Petróleo tem 0 questões | **0 / 52** |
-| Pares sobrepostos sem regra na Parte II | **3** (propostos abaixo) |
+12 oficiais: **8 I + 4 BASICAS**, todos corretos. Vazamento inverso adicional: **as 9 altas → I** (B1.1, B1.2, B1.3). Nenhum BASICAS extra.
 
-### D1. Regra 7 — aplicação estrutural (não reabrir; auditar se foi aplicada)
+### C1. Destino I (8) — corretos
 
-| Decisão | Onde caiu na árvore | Status |
+| ID | Núcleo | FRONT |
 |---|---|---|
-| Geoquímica orgânica em Geologia, não em Química do Petróleo | `GEO_06` Sistema Petrolífero e Geoquímica (`GEO_06_002` Geoquímica e Biomarcadores, 7 q.; `GEO_06_004` Origem e Maturação, 10 q.). QUI_PET não tem querogênio/COT/Rock-Eval | Aplicada |
-| PVT e fases em Reservatórios | `RESERV_01` Comportamento de Fases e PVT (10 q.) | Aplicada |
-| Propriedade da rocha em Petrofísica; rocha-fluido em Reservatórios | `PETROF_04` Porosidade (9) + Permeabilidade Absoluta (3); `RESERV_02` Molhabilidade e Pressão Capilar (8) + Permeabilidade Efetiva e Relativa (5) | Aplicada |
-| Modelo estático em Geologia; dinâmico em Reservatórios | `GEO_04_002` Geoestatística (8), `GEO_04_003` Modelagem Geológica 3D (9); `RESERV_06_003` Simulação e Ajuste de Histórico (2) | Aplicada |
-| CO₂/CCUS/descarbonização como processo na disciplina técnica, nunca em SUST | `PROC_PRI_01_003` Reinjeção de Gás e CO₂ (4), `PROC_PRI_03_004` Remoção de CO₂ por Membranas (2), `RESERV_04_002` Injeção de Gás e WAG (4), `INS_SUB_02_001` Separação e Bombeio Submarino (4). SUST não tem nó de CCUS | Aplicada |
-| Garantia de Escoamento como assunto de Elevação e Escoamento | `ELE_ESC_03` (10 q.: hidratos, parafinas, pigging) | Aplicada |
-| Linha d'água: INS_SUB abaixo, INS_MAR acima | Assuntos INS_SUB = equipamentos/risers/instalação/integridade; INS_MAR = casco/unidades/utilidades/offloading. Risers ficam em INS_SUB (`INS_SUB_03_002`, `PET_FRONT_029`) | Aplicada |
+| `2008_ESPECIALISTA EM REGULACAO DE PETROLEO E DERIVADOS_2-PROVA __PASSADA_01__Q38` | vedações a servidores de agências / parentesco | 004 |
+| `…__Q39` | classe e padrão de carreira | 004 |
+| `Prova-Matriz-…Gestao-de-Projetos-e-Contratos…__Q48` | COBIT e ISO 27001 | 004 |
+| `prova_gab__PASSADA_01__Q36` | direitos dos usuários, Lei 8.987 | 004 |
+| `…__Q37` | reversão, encampação, caducidade | 004 |
+| `…__Q40` | arbitragem em concessão de serviço público | 004 |
+| `…__Q44` | tarifa inicial, Lei 8.987 | 004 |
+| `…__Q45` | intervenção na concessão | 004 |
 
-### D2. Contradições instanciadas
+Nenhum dos 8 deveria voltar para Petróleo.
 
-Nenhuma listável. Sem `nucleo_cobrado` não se demonstra “a regra manda A e a questão X foi para B”.
+### C2. Destino BASICAS (4) — corretos
 
-### D3. Pares sobrepostos sem `PET_FRONT`
+| ID | Destino | Folha mais justa? |
+|---|---|---|
+| `2008_ESPECIALISTA EM REGULACAO DE PETROLEO E DERIVADOS_2-PROVA __PASSADA_01__Q48` azeótropo etanol-água | `TERMOD_03_001` Diagramas de Fases | `TERMOD_03_002` (Raoult / bolha-orvalho) também cabe; **não** invalida a saída (FRONT_016/039) |
+| `2022_FGV_Analista_de_pesquisa_energetica_petroleo-exploracao_e_producao_PROVA__PASSADA_01__QQuestão Discursiva 1` retrofit de lâmpadas | `ENG_ECO_01` (nível de assunto) | `ENG_ECO_01_006` VPL existiria; o mapeamento parou no assunto. Saída em si ok (FRONT_044) |
+| `prova_gab__PASSADA_01__Q46` turbina / US / PD | `MEC_FLU_07_001` | ok (FRONT_052) |
+| `prova_gab__PASSADA_01__Q65` placa de orifício | `MEC_FLU_07_002` | ok (FRONT_052) |
 
-Cada par tem questões nos dois lados (contagens abaixo). A Parte II não despacha o par.
+### C3. Vazamento inverso
 
-**Par 1 — `INS_MAR_03_003` Água de Injeção (2) × `RESERV_04_003` Injeção de Água (6).**  
-`PET_FRONT_031` despacha água de injeção como *utilidade da unidade* versus tratamento de água *produzida* em `PROC_PRI`, não versus waterflood em Reservatórios.
+Além das 8+4 oficiais, B1.1 (5), B1.2 (3) e B1.3 (1) são petróleo-mapeado que deveriam ser **I**.
 
-- `INS_MAR`: qualidade e condicionamento da água de injeção como utilidade (dessulfatação, filtração, biocida).
-- `RESERV`: injeção de água como método de recuperação (arranjos, varrido, preenchimento).
+---
 
-**Par 2 — `GEOF_06_002` Física de Rochas (2) × `PETROF_04` / `PETROF_01` (propriedade da rocha e saturação).**  
-`PET_FRONT_011` despacha sônico de poço versus well-tie, não Gassmann/substituição de fluidos versus petrofísica de laboratório.
+## D. Fronteiras e regras 4–8
 
-- `GEOF`: velocidades, impedância e substituição de fluidos para sísmica (AVO/4D).
-- `PETROF`: porosidade, saturação e k medidas no poço ou no testemunho.
+### Método
 
-**Par 3 — `GEO_04_004` Reservatórios Fraturados (2) × `RESERV_02` Escoamento em Meios Porosos.**  
-Não há `PET_FRONT` para fratura como objeto geológico versus como meio de fluxo.
+Para cada `PET_FRONT_001`–`052`, busca no join de instâncias em que o núcleo é o objeto X da regra e o mapeamento caiu no lado B. Pares de folhas em disciplinas distintas com conteúdo sobreposto e **sem** FRONT. FRONT cujo lado petróleo aponta a folha vazia (antecipação).
 
-- `GEO`: caracterização da rede de fraturas no modelo estático.
-- `RESERV`: escoamento em meio fraturado (dupla porosidade, permeabilidade de fratura).
+### D1. FRONT contraditas (instanciação = as 16 altas)
 
-Outros pares com nome parecido **já** têm regra: `PETROF_05` Testes de Formação × `RESERV_07_005` (`PET_FRONT_014`); `COMERC_02_003` × `REGUL_02_003` (`PET_FRONT_042`); `QUI_PET_02` × `RESERV_01` (`PET_FRONT_016`); `POCO_03_001` Abandono × norma (`PET_FRONT_002`); `PROC_PRI_04` × `SUST_01` (`PET_FRONT_003`).
+| FRONT / regra | Instância |
+|---|---|
+| 004 + r6 | 5× teoria do Estado regulador; 3× certame genérico |
+| 004 + r4/r6 | IDW/Spline GIS |
+| 006 + r7 | 2× fluxo/alocação em fratura em GEO |
+| 010 | avaliação econômico-financeira em GEO |
+| 023 | jack-up em INS_MAR |
+| 042 | distribuidor atacadista em REGUL |
+| 002 + r5 | classe técnica de GLP em REGUL |
+| 025 | ILI de corrosão/mossas em ELE_ESC |
 
-### D4. Regras escritas por antecipação
+### D2. Par sem FRONT que o corpus instancia
 
-Nenhum `PET_FRONT` aponta um lado de Petróleo com zero questões. Os nós que as regras citam têm carga, por exemplo: BCS 4 (`PET_FRONT_028`), fadiga de riser 6 (`034`), SGSS 5 (`033`), RTM 11 (`052`), POS 11 (`010`), PEI 2 (`048`), mandatos 1 (`040`), HISEP/separação submarina 4 (`030`/`050`), 4D 10 (`012`).
+**Único agora evidenciado:** caracterização **estática** de reservatório fraturado (`GEO_04_004`) versus **fluxo / alocação injetor-produtor** em meio fraturado (`RESERV_06_001`). Sem frase explícita além de FRONT_006 genérica, as duas questões caíram no nó geológico.
 
-Não se prova antecipação. Algumas regras (`013` Snell, `024` Stevin, `028` afinidade, `034` S-N, `039` azeótropo) são higiene de classificador contra as Básicas; o lado de Petróleo existe no corpus.
+Proposta (uma frase por lado): **GEO** — geometria, condutividade **geológica** e selo vs condutivo da rede de fraturas no modelo estático. **RESERV** — escoamento matriz-fratura, alocação e otimização de injetores/produtores.
+
+Água de injeção (utilidade `INS_MAR_03_003` vs waterflood `RESERV_04_003`) e física de rochas (`GEOF_06_002`) vs PETROF **não** produziram contradição no corpus — não são FRONT mortas a inventar por antecipação.
+
+### D3. FRONT antecipatória
+
+Nenhuma das 52 aponta para folha vazia no lado petróleo. Nada a apagar.
+
+### D4. Regras 4–8 (estrutura)
+
+- **4:** 8 I oficiais + 9 altas→I; o restante STEM no corpus tem âncora petrolífera.
+- **5:** a alta GLP é o único desvio encontrado.
+- **6:** GIS IDW + as 8 teorias/certames genéricos; sísmica/perfilagem/SIG com âncora E&P permanece.
+- **7:** **não reaberta.** PVT, φ/k, geoquímica orgânica, waterline, CO₂-processo vs EOR, flow assurance: estrutura ok. A tensão nova é o par fraturado (D2), fronteira **faltante**, não revisão da 7.
+- **8:** após as altas, `REGUL_04_002` e `GEO_04_004` ficam vazios → apagar. Nenhuma outra folha vazia hoje.
 
 ---
 
@@ -243,34 +300,19 @@ Não se prova antecipação. Algumas regras (`013` Snell, `024` Stevin, `028` af
 
 ### Método
 
-Varredura de todos os 77 assuntos e 262 subassuntos: comprimento, `:`, `()`, enumeração tipo “a, b, c, d”. Exceções documentadas aplicadas. Colisão = nome que descreve o irmão ou o pai. Correspondência nome × questões: só é certificável com `nucleo_cobrado`; aqui restringe-se a colisão *onômica* (o nome, sozinho, não individualiza o conhecimento).
+Varredura de comprimento > 38, dois-pontos, parênteses e enumeração, contra as três exceções documentadas. Para cada subassunto, confronto nome × núcleos da folha e colisão com irmãs.
 
 ### Números
 
-| Checagem | Resultado |
-|---|---|
-| Subassuntos > 38 caracteres fora das exceções | **0** |
-| `Plataformas Fixas, Semissubmersíveis e TLP` | 42 — exceção documentada |
-| `Energias Renováveis e Matriz Energética` | 39 — exceção documentada (assunto `SUST_02`) |
-| Dois-pontos fora de `Kick: Causas e Detecção` | **0** |
-| Parênteses explicativos | **0** |
-| Subassuntos exatamente no teto (38) | 2: `GEOF_04_003` Indicadores Diretos de Hidrocarbonetos; `POCO_01_001` Arquitetura e Sequência de Completação |
-| Colisões de nome / guarda-chuva (regra 1 e 2) | **3** |
+Acima de 38 fora das exceções: **0**. Exceções usadas: `INS_MAR_02_002` (42), `SUST_02` (39). Dois-pontos: só `POCO_02_002 Kick: Causas e Detecção` (exceção). Parênteses: 0. Vírgula/enumeração fora da exceção de plataformas: 5 folhas (`COMERC_03_001`, `GEO_03_001`, `INS_SUB_01_002`, `INS_SUB_03_001`, `PETROF_03_001`) — regra 2, **não bloqueiam** (siglas correntes).
 
-Siglas nos nomes (`PVT`, `WAG`, `TLD`, `PPSA`, `FEL`, `ESD`, `FID`, `GNL`, `FPSO`, `AVO`, `LWD`, `MWD`, `BOP`, `ECD`, `HAZOP`, `SGSO`, `SGSS`, `ANP`, `UPGN`, `API`, `PLET`, `PLEM`, `ROV`, `SP`, `TLP`, `EAP`, `CO₂`) são nome corrente de área. A lista entre parênteses na regra 2 é exemplificativa, não numerus clausus. Não se pede rename por gosto.
+### Bloqueadores (gênero no nome + espécie nas irmãs)
 
-### Achados
+1. **`GEOF_02_003` “Inversão Sísmica”** — as 7 questões são inversão **determinística/estocástica** e impedância. A irmã `GEOF_02_001` já é “Análise AVO e Inversão Elástica”. O nome gênero cobre a irmã. Alocação internamente coerente (não fundir). Renomear para o residual (p.ex. inversão determinística e estocástica), sem “inversão” absoluto.
+2. **`RESERV_03_004` “Mecanismos Primários de Produção”** — as irmãs já são gás em solução / influxo. O corpus desta folha é comparação / elenco de mecanismos. O nome guarda-chuva cobre `RESERV_03_003`. Renomear para o residual comparativo.
+3. **`POCO_03_004` “Métodos de Estimulação”** — gênero; irmãs acidificação e fratura. Uma questão é definição de gênero (identidade própria, regra 3); a outra é indicação de acidificação (B3). Ou a folha vira residual explícito, ou a mista sobe ao assunto.
 
-**E1. `GEOF_02_003` Inversão Sísmica (7 q.) colide com `GEOF_02_001` Análise AVO e Inversão Elástica (7 q.).**  
-Regra 2: o nome não diz o conceito que o irmão já não cubra. “Inversão Sísmica” é o gênero; o irmão já nomeia uma espécie (inversão elástica). Rename só se o conteúdo for outra inversão (p.ex. acústica / impedância). Sem `nucleo_cobrado` não se move questão; o *nome* já viola a regra 2.
-
-**E2. `RESERV_03_004` Mecanismos Primários de Produção (9 q.) é guarda-chuva do irmão `RESERV_03_003` Mecanismo de Gás em Solução (4 q.).**  
-Regra 1: um subassunto por conhecimento determinante. Gás em solução *é* mecanismo primário. O nome do _004 não omite o que o assunto já diz (`RESERV_03` já se chama Mecanismos e Balanço de Materiais); ele reengloba o irmão. Se as 9 questões forem os *outros* mecanismos (água, capa, compactação), o nome está errado (regra 2). Se forem a classificação geral, funde-se com o assunto ou com o _003.
-
-**E3. `POCO_03_004` Métodos de Estimulação (2 q.) é guarda-chuva dos irmãos `POCO_03_002` Acidificação Matricial (2) e `POCO_03_003` Fraturamento Hidráulico (2).**  
-Mesma regra 1. Identidade própria só se as 2 questões forem seleção/classificação de métodos (análogo a `ELE_ESC_01_005` Seleção de Métodos de Elevação, que convive com BCS/gas lift porque o conhecimento determinante é a *seleção*). O nome atual não diz “seleção”; diz o gênero. Rename para o conceito real ou fusão, depois de ler o `nucleo_cobrado`.
-
-Não são achados (não violaram regra 2 / não são rename por gosto): `CAPEX, OPEX e Lifting Cost`; `Manifolds, PLET e PLEM`; `Falhas, Dobras e Tensões`; `Dutos Flexíveis, Rígidos e Umbilicais` — nomes correntes de um objeto composto, não ementa.
+Não bloqueadores: `REGUL` vs `SUST` em licenciamento — FRONT_003. `INS_MAR_03_003` vs `RESERV_04_003` — FRONT_022/031. `COMERC_03_001` vs `PRJ_02_001` — FRONT_043.
 
 ---
 
@@ -278,110 +320,76 @@ Não são achados (não violaram regra 2 / não são rename por gosto): `CAPEX, 
 
 ### Método
 
-Contagem de questões por nó. Subassuntos com 1–2 questões: identidade própria versus vizinho natural do *mesmo conhecimento* (não fusão por contagem). Assuntos/disciplinas grandes ou pequenos: SUST e QUI_PET lidos por inteiro, como pedido. Regra 8: nó sem questão.
+Contagem por folha; 1-q e 2-q lidos um a um quanto a identidade vs vizinho. Densidade contra a casa (Produção, só estilo). SUST (16) e QUI_PET (18) como as menores disciplinas.
 
 ### Números
 
-| Métrica | Valor |
+| | N |
 |---|---|
-| Subassuntos com 0 questão | **0** (regra 8 cumprida) |
-| Subassuntos com 1 questão | **1** (`SUST_02_001` Mandatos de Biocombustíveis — exceção documentada) |
-| Subassuntos com 2 questões | **51** |
-| Questões / disciplina (min–max) | SUST 16 … GEO 261 |
-| Assunto mais carregado | `REGUL_07` Regimes de E&P (94 q., 6 subassuntos distintos) |
-| Subassunto mais carregado | `REGUL_07_003` PPSA (40 q.) |
+| Folhas com 1 questão | **1** (`SUST_02_001` Mandatos de Biocombustíveis — exceção documentada) |
+| Folhas com 2 questões | **51** (identidade própria nos núcleos; não fundir por contagem) |
+| SUST / QUI_PET | 16 / 18 — estrutura interna se sustenta |
+| Após B1, folhas que esvaziam | `REGUL_04_002`, `GEO_04_004` |
 
-Carga por disciplina (in-tree): GEO 261, REGUL 235, RESERV 159, GEOF 119, POCO 113, PETROF 74, INS_SUB 58, ELE_ESC 54, PROC_PRI 54, COMERC 48, PRJ 41, REF_GAS 38, SEG_PRO 29, INS_MAR 25, QUI_PET 18, SUST 16.
+`SUST_02_001` permanece a exceção da regra 3. Assuntos de SUST (efluentes/emissões, matriz, licenciamento/PEI) e QUI_PET (classificação/API, heteroátomos, séries, gás, inibidores) não são 1 questão disfarçada de disciplina.
 
-### F1. Subassuntos de 1–2 questões — identidade
-
-Não se sugere fusão só pela contagem. Amostra do critério:
-
-| Nó | q. | Veredito |
-|---|---|---|
-| `SUST_02_001` Mandatos de Biocombustíveis | 1 | Identidade própria (política de mistura ≠ matriz). Exceção documentada. Manter. |
-| `INS_MAR_02_001` FPSO | 2 | Identidade própria (produção+armazenamento+offloading). Não fundir em `INS_MAR_02_002`. |
-| `GEO_03_002` Seções Balanceadas | 2 | Técnica distinta de “Falhas, Dobras e Tensões”. Manter. |
-| `GEOF_03_005` Velocidades Sísmicas | 2 | Conceito próprio (Dix, NMO, modelo de v). Manter. |
-| `GEOF_05_003` Modelo Convolucional e Wavelet | 2 | Fundamento de processamento, não é o irmão Migração. Manter. |
-| `GEOF_06_002` Física de Rochas | 2 | Identidade própria; o problema é o *pai* (ver F3) e a fronteira com PETROF (D3 par 2). Não fundir com 4D. |
-| `GEO_04_004` Reservatórios Fraturados | 2 | Identidade geológica; falta FRONT com RESERV (D3 par 3). Não fundir em Modelagem 3D. |
-| `PETROF_02_002/003/004` perfis específicos | 2+2+2 | Física distinta por ferramenta. Manter. O irmão `PETROF_02_005` Princípios e Classificação (8) é o overview, não o mesmo conhecimento. |
-| `PETROF_05_001` Comparação de Testes | 2 | Identidade se o determinante for DST vs cabo. Manter até o `nucleo_cobrado`. |
-| `ELE_ESC_04_001` Análise Nodal | 2 | Conceito próprio, não é Índice de Produtividade. Manter. |
-| `ELE_ESC_02_001` Escoamento Multifásico | 2 | Fenômeno ≠ simulação (`_002`, 4). Manter. |
-| `REF_GAS_03_001` / `_002` craqueamentos | 2+2 | Processos distintos. Manter. |
-| `QUI_PET_03_001` Inibidores e Sequestrantes | 2 | Identidade exigida por `PET_FRONT_027`/`036` (produto × técnica). Manter. |
-| `POCO_03_002/003` Acidificação / Fraturamento | 2+2 | Identidade própria. O problema é o irmão guarda-chuva `POCO_03_004` (E3). |
-| `RESERV_06_003` Simulação e Ajuste de Histórico | 2 | É o lado dinâmico da regra 7. Pouca carga, identidade máxima. Manter. |
-| `PRJ_01_002` Long Lead Items | 2 | Jargão próprio de suprimentos de UEP. Manter. |
-| `SUST_03_002` PEI | 2 | `PET_FRONT_048` existe justamente para não fundir com SEG_PRO. Manter. |
-
-Os demais nós de 2 questões (ancoragem, hidratos já estão em 3, etc.) têm nome de objeto técnico reconhecível e não têm vizinho que seja o *mesmo* conhecimento. Sem `nucleo_cobrado`, não se funde nenhum além dos três guarda-chuva da seção E.
-
-### F2. SUST (16) e QUI_PET (18) — a estrutura interna se sustenta?
-
-**SUST — sim.** Três assuntos, seis subassuntos, carga 2+2 / 1+5 / 4+2. Cada folha corresponde a um lado de fronteira já escrito (`PET_FRONT_003` efluente×planta, `040` mandato×produto, `048` PEI×processo, `050` política×CCUS, `051` matriz×instituição). Fundir as seis folhas destruiria essas fronteiras. Não é disciplina pequena demais: é disciplina *estreita por desenho* (regra 7: técnica não entra aqui).
-
-**QUI_PET — sim.** Três assuntos, seis subassuntos, carga 4+4+3 / 3+2 / 2. É o lado “o que é a molécula” de `PET_FRONT_008`, `016`, `027`, `036`, `037`, `041`. Sem esta disciplina, composição/°API/Wobbe/inibidor-como-produto não têm destino canônico e cairiam em GEO, RESERV, REF_GAS ou ELE_ESC — exatamente o que as fronteiras proíbem. `QUI_PET_03` com um único subassunto é pequeno, mas é o suporte estrutural de `PET_FRONT_027`/`036`. Manter.
-
-### F3. Assuntos grandes ou híbridos (não é achado por contagem)
-
-**Não é problema por ser grande:** `REGUL_07` (94) tem seis folhas com objetos distintos (concessão, partilha, PPSA, cessão onerosa, conteúdo local, vigentes/extintos). `GEO_06` (59) são os elementos do sistema petrolífero. Contagem alta de prova ANP não viola regra.
-
-**F3a. `POCO_03` Estimulação e Abandono** junta P&A (4 q.) com estimulação (6 q.). Não é o mesmo conhecimento determinante. As *folhas* já separam; o nome do assunto é que é híbrido. Severidade baixa: organização, não classificação. Cindir o assunto só se se for reordenar IDs por outra razão (A2).
-
-**F3b. `GEOF_06` Sísmica 4D e Física de Rochas** põe física de rochas (insumo de AVO **e** de 4D) debaixo de 4D. A folha `GEOF_06_002` tem identidade; o pai sugere dependência falsa. `PET_FRONT_012` trata 4D GEOF×RESERV, não física de rochas×AVO. Observação de rótulo de assunto, não fusão da folha.
-
-**F3c. `INS_SUB_01_004` Tecnologias Submarinas do Pré-Sal (3 q.).** Nome de pacote, não de conhecimento. Risco de colidir com `INS_SUB_02_001` (HISEP/VASPS estão em `PET_FRONT_030`/`050`). Sem `nucleo_cobrado` não se move; o nome é genérico demais para a regra 2 se as 3 questões forem um equipamento já nomeado no irmão. Watch item, não contestação.
+`ENG_ECO_01` no Núcleo tem subassuntos; a discursiva de iluminação caiu no **assunto**. Defeito de precisão do destino BASICAS, não da árvore de Petróleo.
 
 ---
 
 ## Tabela consolidada de contestações de alocação
 
-Ordenada por severidade e disciplina. **Vazia:** nenhuma contestação satisfaz a regra do auditor (citar a regra violada **e** o `nucleo_cobrado`).
+Ordenada por severidade, depois disciplina atual, depois `id_global`.
 
-| id_global | atual | proposto | regra | severidade |
+| id_global | atual | proposto | regra | sev |
 |---|---|---|---|---|
-| — | — | — | — | — |
-
-Itens que **não** entram nesta tabela (não são alocação de questão in-tree):
-
-- as 12 saídas (seção C) — corretas pelo rótulo do mapeamento;
-- A2 ordem alfabética, E1–E3 nomes, D3 pares sem FRONT, A3 granularidade `ENG_ECO_01`.
+| `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Geologia-de-Exploracao-11-12-2025__PASSADA_01__Q36` | `GEO_04_004` | `RESERV_06_001` | FRONT_006; r7 | alta |
+| `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Geologia-de-Reservatorios-11-12-2025__PASSADA_01__Q41` | `GEO_04_004` | `RESERV_06_001` | FRONT_006; r7 | alta |
+| `2010-epe-analista-de-pesquisa-energetica-petroleo-exploracao-prova__PASSADA_01__Q24` | `GEO_04_002` | `I` | r4; r6 | alta |
+| `2010-epe-analista-de-pesquisa-energetica-petroleo-exploracao-prova__PASSADA_01__Q40` | `GEO_01_003` | `COMERC_03_003` | FRONT_010 | alta |
+| `2005_ESPECIALISTA EM REGULACAO DE PETROLEO_1-PROVA__PASSADA_01__Q40` | `INS_MAR_02_002` | `POCO_07_002` | FRONT_023 | alta |
+| `2008_ESPECIALISTA EM REGULACAO DE PETROLEO E DERIVADOS_1-PROVA __PASSADA_01__Q56` | `ELE_ESC_03_003` | `INS_SUB_05_002` | FRONT_025 | alta |
+| `prova_gab__PASSADA_01__Q38` | `REGUL_04_002` | `I` | FRONT_004; r6 | alta |
+| `prova_gab__PASSADA_01__Q39` | `REGUL_04_002` | `I` | FRONT_004; r6 | alta |
+| `prova_gab__PASSADA_01__Q41` | `REGUL_04_002` | `I` | FRONT_004; r6 | alta |
+| `prova_gab__PASSADA_01__Q42` | `REGUL_04_002` | `I` | FRONT_004; r6 | alta |
+| `prova_gab__PASSADA_01__Q43` | `REGUL_04_002` | `I` | FRONT_004; r6 | alta |
+| `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Gestao-de-Projetos-e-Contratos-em-Oleo-e-Gas-11-12-2025__PASSADA_01__Q41` | `REGUL_04_005` | `I` | FRONT_004; r6 | alta |
+| `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Gestao-de-Projetos-e-Contratos-em-Oleo-e-Gas-11-12-2025__PASSADA_01__Q43` | `REGUL_04_005` | `I` | FRONT_004; r6 | alta |
+| `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Gestao-de-Projetos-e-Contratos-em-Oleo-e-Gas-11-12-2025__PASSADA_01__Q51` | `REGUL_04_005` | `I` | FRONT_004; r6 | alta |
+| `2005_ESPECIALISTA EM REGULACAO DE PETROLEO_2-PROVA__PASSADA_01__Q41` | `REGUL_02_002` | `COMERC_03_002` | FRONT_042 | alta |
+| `2008_ESPECIALISTA EM REGULACAO DE PETROLEO E DERIVADOS_2-PROVA __PASSADA_01__Q58` | `REGUL_02_002` | `SEG_PRO_01_003` | FRONT_002; r5 | alta |
+| `2006-epe-tecnico-de-nivel-superior-petroleo-exploracao-e-producao-prova__PASSADA_01__Q42` | `GEO_06_003` | `GEO_07_002` | r1 | média |
+| `OBJETIVA-09-GMO09-Gerenciamento-e-Monitoramento-das-Operacoes-com-Pocos__PASSADA_01__Q58` | `REGUL_06_001` | `REGUL_07_005` | r1 | média |
+| `OBJETIVA-10-OSS10-Operacao-de-Sistemas-Submarinos-de-Producao__PASSADA_01__Q58` | `REGUL_06_001` | `REGUL_07_005` | r1 | média |
+| `OBJETIVA-11-PIP11-Processo-de-Individualizacao-de-Producao__PASSADA_01__Q58` | `REGUL_06_001` | `REGUL_07_005` | r1 | média |
+| `OBJETIVA-12-IDG12-Interpretacao-de-Dados-Geofisicos__PASSADA_01__Q58` | `REGUL_06_001` | `REGUL_07_005` | r1 | média |
+| `OBJETIVA-13-OGP13-Operacao-Geologica-em-Pocos-Exploratorios__PASSADA_01__Q58` | `REGUL_06_001` | `REGUL_07_005` | r1 | média |
+| `OBJETIVA-14-CMR14-Caracterizacao-e-Modelagem-de-Reservatorios__PASSADA_01__Q58` | `REGUL_06_001` | `REGUL_07_005` | r1 | média |
+| `OBJETIVA-15-MGR15-Modelagem-e-Gerenciamento-de-Reservatorios__PASSADA_01__Q58` | `REGUL_06_001` | `REGUL_07_005` | r1 | média |
+| `Prova-Matriz-Especialista-em-Petroleo-e-Gas-Engenharia-de-Instalacoes-Maritimas-11-12-2025__PASSADA_01__QQuestão 27` | `RESERV_04_001` | `RESERV_06_001` | r1 | média |
+| `2024_FGV_ANALISTA DE PESQUISAS ENERGETICAS-petroleo-exploracao-e-producao__PASSADA_01__Q65` | `GEO_01_002` | `GEO_01_003` | r1; FRONT_010 | baixa |
+| `2022_FGV_Analista_de_pesquisa_energetica_petroleo-exploracao_e_producao_PROVA__PASSADA_01__Q62` | `POCO_03_004` | `POCO_03_002` | r1 | baixa |
+| `2008_PETROBRAS_CESPE_2_PROVA__PASSADA_01__Q120` | `REF_GAS_03_006` | `REF_GAS_03_004` | r1 | baixa |
+| `2011-2_PETROBRAS__PASSADA_01__Q64` | `RESERV_03_003` | `RESERV_03_004` | r1 | baixa |
+| `2024_FGV_ANALISTA DE PESQUISAS ENERGETICAS-petroleo-exploracao-e-producao__PASSADA_01__Q41` | `RESERV_04_004` | `RESERV_04_001` | r1 | baixa |
+| `OBJETIVA-15-MGR15-Modelagem-e-Gerenciamento-de-Reservatorios__PASSADA_01__Q78` | `RESERV_04_005` | `RESERV_04_001` | r1 | baixa |
+| `OBJETIVA-11-PIP11-Processo-de-Individualizacao-de-Producao__PASSADA_01__Q98` | `SEG_PRO_02_001` | `SEG_PRO_02_002` | r1; FRONT_049 | baixa |
 
 ---
 
-## Lista de bloqueios
+## Lista de bloqueios (o que precisa mudar antes de congelar)
 
-O que precisa mudar **antes** de congelar:
+1. **Mover ou sair as 16 altas** (9 para `I`; 2 GEO→`RESERV_06_001`; 1 GEO→`COMERC_03_003`; 1 INS_MAR→`POCO_07_002`; 1 REGUL→`COMERC_03_002`; 1 REGUL→`SEG_PRO_01_003`; 1 ELE_ESC→`INS_SUB_05_002`).
+2. **Apagar** as folhas que esvaziam (`REGUL_04_002`, `GEO_04_004`) — regra 8.
+3. **Acrescentar FRONT** do par fraturado estático vs fluxo, e **renomear** E1–E3 (`GEOF_02_003`, `RESERV_03_004`, `POCO_03_004`).
+4. **Corrigir** (ou aceitar documentadamente) os sete dumps OBJETIVA `Q58` em `REGUL_06_001`.
+5. **Alinhamento alfabético A3:** remapear IDs à ordem folding da Produção **ou** documentar Unicode/sigla na Parte II.
 
-1. **Entregar `00_ENTRADA_ESPECIFICAS.jsonl` e reexecutar B** sobre as 1.342 questões. Sem isso a alocação não é certificável. Este é o bloqueio principal.
-2. **Resolver E1–E3** (rename ou fusão, com de-para se o ID mudar): `GEOF_02_003`, `RESERV_03_004`, `POCO_03_004`. A regra 1/2 já está violada pelo nome, independentemente do corpus.
-3. **Ordem alfabética (A2):** ou reordenar com de-para de IDs na chave folding (como Produção), ou escrever na Parte II a chave efetivamente usada (codepoint Unicode). Do jeito que está, a checagem A falha contra a convenção da casa.
-4. **Escrever os três `PET_FRONT` de D3** (água de injeção utilidade×waterflood; física de rochas×petrofísica; reservatório fraturado estático×fluxo). Não são bloqueio de alocação já vista; são buraco do classificador na próxima questão limítrofe.
+Itens B2/B3 restantes, sozinhos, não bloqueiam se 1–3 e 5 forem feitos.
 
-O que **não** bloqueia:
-
-- SUST e QUI_PET pequenos — estrutura interna se sustenta.
-- `SUST_02_001` com 1 questão — exceção documentada, identidade própria.
-- 51 subassuntos com 2 questões — identidade própria na inspeção onômica.
-- 0 nós vazios, 0 lacunas, 0 nomes duplicados, 52 fronteiras contínuas, regra 7 estruturalmente aplicada, 8×`I` e 4×BASICAS coerentes com a Parte II *pelos rótulos do mapeamento*.
-- `ENG_ECO_01` como id de assunto — canônico; só uniformizar granularidade se o contrato do classificador exigir folha.
-- Status `CONGELADO` já escrito na Parte II de `PETROLEO.md` — é pretensão, não fato desta auditoria.
-
-**Nada disto autoriza reconstruir a árvore.** Os bloqueios 2–4 são correções pontuais. O bloqueio 1 é evidência, não remodelagem.
+Nada além disto bloqueia. A árvore é mecanicamente íntegra; a regra 7 está aplicada na estrutura; SUST e QUI_PET se sustentam; as 12 saídas oficiais estão certas.
 
 ---
 
-## Apêndice — evidência de arquivos
-
-| Arquivo pedido | O que foi usado |
-|---|---|
-| `PETROLEO.md` | anexo `PETROLEO_6530.md` (1.171 linhas; 16/77/262; `PET_FRONT_001`–`052`) |
-| `MAPEAMENTO_PETROLEO.json` | anexo `MAPEAMENTO_PETROLEO_3b1d.json` (`gerado_em`: 2026-09-04, 1.354) |
-| `00_ENTRADA_ESPECIFICAS.jsonl` | **ausente** |
-| `NUCLEO_BASICO.md` | PR #2 `arvores/NUCLEO_BASICO_CORRIGIDO_ETAPA2.md` (15 disciplinas, 98 assuntos, 361 subassuntos) |
-| `PRODUCAO.md` | PR #3 `ENGENHARIA_PRODUCAO.md` (estilo; 20/67/227; ordem alfabética folding 0 violações) |
-
-Nenhum arquivo de taxonomia foi alterado nesta auditoria.
+*Auditoria independente. Árvore, mapeamento, ENTRADA e Núcleo Básico não foram alterados. Corpus: 1.354 linhas, 1.342 em árvore, 12 saídas oficiais.*
