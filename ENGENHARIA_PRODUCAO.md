@@ -140,7 +140,7 @@ Use este arquivo em conjunto com a Árvore Mestra do Núcleo Básico e com o pro
 ### GES_OPE_06 — Produção Enxuta e Just in Time
 - `GES_OPE_06_001` — Princípios e Desperdícios Lean/JIT
 - `GES_OPE_06_002` — Produção Puxada e Kanban
-- `GES_OPE_06_003` — Trabalho Padronizado e SMED
+- `GES_OPE_06_003` — Trabalho Padronizado, SMED e Poka-Yoke
 
 ## GES_PES — Gestão de Pessoas
 
@@ -346,9 +346,9 @@ Use este arquivo em conjunto com a Árvore Mestra do Núcleo Básico e com o pro
 ## QUA — Qualidade
 
 ### QUA_01 — Ferramentas da Qualidade
-- `QUA_01_001` — Ferramentas Básicas
-- `QUA_01_002` — Ferramentas Gerenciais
-- `QUA_01_003` — FMEA, Poka-Yoke e Prevenção de Falhas
+- `QUA_01_001` — Análise de Falhas e Causa Raiz (FMEA, FTA, 5 Porquês)
+- `QUA_01_002` — Ferramentas Básicas
+- `QUA_01_003` — Ferramentas Gerenciais
 
 ### QUA_02 — Fundamentos da Qualidade
 - `QUA_02_001` — Conceitos e Dimensões da Qualidade
@@ -553,3 +553,7 @@ Use este arquivo em conjunto com a Árvore Mestra do Núcleo Básico e com o pro
 ## PRD_FRONT_032 — Ecodesign / Design for X × Sustentabilidade
 **Engenharia do Produto** (`ENG_PRO`): DFX como decisão de projeto do produto: projeto para montagem, desmontagem, manufatura e remanufatura, modularidade e requisitos ambientais incorporados ao projeto.
 **Sustentabilidade** (`SUS`): perspectiva de gestão ambiental do ciclo de vida: ACV, produção mais limpa, ecoeficiência, matriz energética, política e desempenho ambiental.
+
+## PRD_FRONT_033 — FMEA / FTA / Análise de Falhas
+**Qualidade** (`QUA`): priorização de riscos de produto ou processo (severidade, ocorrência, detecção, NPR), investigação de não conformidade e causa raiz.
+**Manutenção e Confiabilidade** (`MAN_CONF`): confiabilidade de equipamentos e sistemas, taxa de falhas, RCM e definição de planos e estratégias de manutenção.
