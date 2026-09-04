@@ -36,7 +36,8 @@ Use este arquivo em conjunto com a Árvore Mestra do Núcleo Básico e com o pro
 
 ### ENG_PRO_01 — Arquitetura e Projeto do Produto
 - `ENG_PRO_01_001` — Arquitetura e Modularidade
-- `ENG_PRO_01_002` — Projeto de Embalagens
+- `ENG_PRO_01_002` — Design for X (DFX): Ecodesign e Desmontagem
+- `ENG_PRO_01_003` — Projeto de Embalagens
 
 ### ENG_PRO_02 — Integração do Desenvolvimento
 - `ENG_PRO_02_001` — CAD/CAM/CAE no Desenvolvimento
@@ -396,9 +397,8 @@ Use este arquivo em conjunto com a Árvore Mestra do Núcleo Básico e com o pro
 
 ### SUS_02 — Produção Sustentável
 - `SUS_02_001` — Avaliação do Ciclo de Vida
-- `SUS_02_002` — Ecodesign e Desmontagem
-- `SUS_02_003` — Matriz e Eficiência Energética
-- `SUS_02_004` — Produção Limpa e Ecoeficiência
+- `SUS_02_002` — Matriz e Eficiência Energética
+- `SUS_02_003` — Produção Limpa e Ecoeficiência
 
 ### SUS_03 — Resíduos e Poluição
 - `SUS_03_001` — Controle da Poluição Industrial
@@ -529,3 +529,27 @@ Use este arquivo em conjunto com a Árvore Mestra do Núcleo Básico e com o pro
 ## PRD_FRONT_026 — Lei de Little / Fluxo
 **Gestão de Operações** (`GES_OPE`): WIP, throughput, lead/flow time e relações de fluxo de processo ou sistema produtivo.
 **Pesquisa Operacional** (`PES_OP`): modelo formal de filas é o conhecimento determinante, com parâmetros de chegada/serviço e medidas de desempenho da fila.
+
+## PRD_FRONT_027 — Gestão de Estoques × Necessidades de Materiais (MRP)
+**Logística e Cadeia de Suprimentos** (`LOG_CAD`): estoque de demanda independente: classificação ABC, tipos de estoque, lote econômico, ponto de pedido, estoque de segurança, giro, cobertura e custos de estoque.
+**Planejamento e Controle da Produção** (`PCP`): estoque de demanda dependente: estrutura do produto (BOM), cálculo de necessidades brutas e líquidas, MRP/MRP II, MPS e integração com o plano mestre.
+
+## PRD_FRONT_028 — Capacidade: Medição × Planejamento
+**Gestão de Operações** (`GES_OPE`): medição do desempenho da capacidade existente: utilização, eficiência, capacidade efetiva, produtividade, Lei de Little, WIP e lead time como indicadores.
+**Planejamento e Controle da Produção** (`PCP`): planejamento da capacidade requerida ou futura: CRP, dimensionamento de recursos, estratégias de acompanhamento e antecipação, planejamento agregado.
+
+## PRD_FRONT_029 — Kanban
+**Gestão de Operações** (`GES_OPE`): kanban como mecanismo de controle da produção puxada: cartões, supermercados, dimensionamento de kanbans, JIT e Sistema Toyota de Produção.
+**Gestão de Projetos** (`GES_PROJ`): quadro kanban como método ágil e visual de gestão do fluxo de trabalho em projetos e equipes, limites de WIP, Scrum e abordagens ágeis.
+
+## PRD_FRONT_030 — ERP
+**Sistemas de Informação** (`SIS_INF`): o ERP como sistema: conceito, evolução, módulos, arquitetura, integração de dados, implantação e impactos organizacionais.
+**Planejamento e Controle da Produção** (`PCP`): o uso do ERP/APS na hierarquia de planejamento: entradas e saídas do MRP/MRP II, integração MPS–MRP–CRP e programação avançada da produção.
+
+## PRD_FRONT_031 — Taylorismo / Fordismo / Toyotismo
+**Engenharia do Trabalho** (`ENG_TRAB`): organização e divisão do trabalho, controle gerencial, administração científica e efeitos sobre o trabalhador e o cargo.
+**Gestão de Operações** (`GES_OPE`): paradigma de produção: produção em massa, linha de montagem como sistema produtivo, produção enxuta, customização em massa e evolução dos sistemas de manufatura.
+
+## PRD_FRONT_032 — Ecodesign / Design for X × Sustentabilidade
+**Engenharia do Produto** (`ENG_PRO`): DFX como decisão de projeto do produto: projeto para montagem, desmontagem, manufatura e remanufatura, modularidade e requisitos ambientais incorporados ao projeto.
+**Sustentabilidade** (`SUS`): perspectiva de gestão ambiental do ciclo de vida: ACV, produção mais limpa, ecoeficiência, matriz energética, política e desempenho ambiental.
