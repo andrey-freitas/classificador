@@ -1,0 +1,460 @@
+nivel,codigo_etapa1,codigo_etapa2,nome_etapa1,nome_etapa2
+assunto,ALG_LIN_02,ALG_LIN_01,Espaços Vetoriais,Espaços Vetoriais
+subassunto,ALG_LIN_02_004,ALG_LIN_01_001,"Espaços Vetoriais, Subespaços, Base e Dimensão","Espaços Vetoriais, Subespaços, Base e Dimensão"
+subassunto,ALG_LIN_02_006,ALG_LIN_01_002,Produto Interno e Ortogonalidade,Produto Interno e Ortogonalidade
+assunto,ALG_LIN_03,ALG_LIN_02,Matrizes e Determinantes,Matrizes e Determinantes
+subassunto,ALG_LIN_03_001,ALG_LIN_02_001,Determinantes,Determinantes
+subassunto,ALG_LIN_03_003,ALG_LIN_02_002,Operações com Matrizes e Matriz Inversa,Operações com Matrizes e Matriz Inversa
+assunto,ALG_LIN_04,ALG_LIN_03,Sistemas Lineares,Sistemas Lineares
+subassunto,ALG_LIN_04_001,ALG_LIN_03_001,"Classificação, Posto e Sistemas Homogêneos","Classificação, Posto e Sistemas Homogêneos"
+subassunto,ALG_LIN_04_003,ALG_LIN_03_002,Resolução de Sistemas Lineares,Resolução de Sistemas Lineares
+assunto,ALG_LIN_05,ALG_LIN_04,Transformações Lineares,Transformações Lineares
+subassunto,ALG_LIN_05_004,ALG_LIN_04_001,"Autovalores, Autovetores e Diagonalização","Autovalores, Autovetores e Diagonalização"
+subassunto,ALG_LIN_05_001,ALG_LIN_04_002,Imagem e Núcleo,Imagem e Núcleo
+subassunto,ALG_LIN_05_002,ALG_LIN_04_003,Matriz de Transformação,Matriz de Transformação
+subassunto,ALG_LIN_05_003,ALG_LIN_04_004,Propriedades de Transformações Lineares,Propriedades de Transformações Lineares
+assunto,CAL_DIF_01,CAL_DIF_01,Cálculo Multivariável e Vetorial,Cálculo Multivariável e Vetorial
+subassunto,CAL_DIF_01_001,CAL_DIF_01_001,Campos Vetoriais e Campos Conservativos,Campos Vetoriais e Campos Conservativos
+subassunto,CAL_DIF_01_003,CAL_DIF_01_002,Extremos e Otimização,Extremos e Otimização
+subassunto,CAL_DIF_01_005,CAL_DIF_01_003,Integrais Múltiplas,Integrais Múltiplas
+assunto,CAL_DIF_02,CAL_DIF_02,Derivadas,Derivadas
+subassunto,CAL_DIF_02_001,CAL_DIF_02_001,Aplicações da Derivada,Aplicações da Derivada
+subassunto,CAL_DIF_02_002,CAL_DIF_02_002,Derivação Implícita,Derivação Implícita
+subassunto,CAL_DIF_02_003,CAL_DIF_02_003,Derivadas de Funções Elementares,Derivadas de Funções Elementares
+subassunto,CAL_DIF_02_005,CAL_DIF_02_004,Regra da Cadeia,Regra da Cadeia
+assunto,CAL_DIF_03,CAL_DIF_03,Equações Diferenciais Ordinárias,Equações Diferenciais Ordinárias
+subassunto,CAL_DIF_03_001,CAL_DIF_03_001,EDOs de Primeira Ordem,EDOs de Primeira Ordem
+subassunto,CAL_DIF_03_002,CAL_DIF_03_002,EDOs de Segunda Ordem,EDOs de Segunda Ordem
+subassunto,CAL_DIF_03_003,CAL_DIF_03_003,Equações Diferenciais Lineares,Equações Diferenciais Lineares
+subassunto,CAL_DIF_03_005,CAL_DIF_03_004,Transformada de Laplace,Transformada de Laplace
+assunto,CAL_DIF_04,CAL_DIF_04,Integrais,Integrais
+subassunto,CAL_DIF_04_001,CAL_DIF_04_001,Aplicações da Integral,Aplicações da Integral
+subassunto,CAL_DIF_04_002,CAL_DIF_04_002,Integrais Definidas,Integrais Definidas
+subassunto,CAL_DIF_04_004,CAL_DIF_04_003,Integrais Indefinidas,Integrais Indefinidas
+subassunto,CAL_DIF_04_005,CAL_DIF_04_004,Métodos de Integração,Métodos de Integração
+assunto,CAL_DIF_05,CAL_DIF_05,Limites e Continuidade,Limites e Continuidade
+subassunto,CAL_DIF_05_003,CAL_DIF_05_001,Limites e Continuidade,Cálculo de Limites e Continuidade de Funções
+subassunto,CAL_DIF_05_002,CAL_DIF_05_002,Indeterminações,Indeterminações
+assunto,CAL_DIF_08,CAL_DIF_06,Métodos Numéricos,Métodos Numéricos
+subassunto,CAL_DIF_08_004,CAL_DIF_06_001,Erros e Convergência Numérica,Erros e Convergência Numérica
+subassunto,CAL_DIF_08_002,CAL_DIF_06_002,"Integração, Derivação e Sistemas Numéricos","Integração, Derivação e Sistemas Numéricos"
+subassunto,CAL_DIF_08_003,CAL_DIF_06_003,Solução Numérica de Equações Diferenciais,Solução Numérica de Equações Diferenciais
+subassunto,CAL_DIF_08_001,CAL_DIF_06_004,"Zeros de Funções (Newton-Raphson, Bisseção)","Zeros de Funções (Newton-Raphson, Bisseção)"
+assunto,CIE_MAT_01,CIE_MAT_01,Classificação e Seleção,Classificação e Seleção
+subassunto,CIE_MAT_01_001,CIE_MAT_01_001,Classificação dos Materiais,Classificação dos Materiais
+subassunto,CIE_MAT_01_002,CIE_MAT_01_002,Seleção de Materiais,Seleção de Materiais
+assunto,CIE_MAT_02,CIE_MAT_02,Corrosão e Degradação,Corrosão e Degradação
+subassunto,CIE_MAT_02_001,CIE_MAT_02_001,Corrosão Eletroquímica,Corrosão Eletroquímica
+subassunto,CIE_MAT_02_002,CIE_MAT_02_002,Corrosão Galvânica,Corrosão Galvânica
+subassunto,CIE_MAT_02_005,CIE_MAT_02_003,Proteção contra Corrosão,Proteção contra Corrosão
+assunto,CIE_MAT_03,CIE_MAT_03,Diagramas de Fases,Diagramas de Fases
+subassunto,CIE_MAT_03_001,CIE_MAT_03_001,Diagrama Ferro-Carbono,Diagrama Ferro-Carbono
+subassunto,CIE_MAT_03_003,CIE_MAT_03_002,Fases e Transformações,Fases e Transformações
+assunto,CIE_MAT_04,CIE_MAT_04,Ensaios de Materiais,Ensaios de Materiais
+subassunto,CIE_MAT_04_001,CIE_MAT_04_001,Ensaio de Impacto,Ensaio de Impacto
+subassunto,CIE_MAT_04_002,CIE_MAT_04_002,Ensaio de Tração,Ensaio de Tração
+subassunto,CIE_MAT_04_003,CIE_MAT_04_003,Ensaios de Dureza,Ensaios de Dureza
+subassunto,CIE_MAT_04_004,CIE_MAT_04_004,Ensaios Não Destrutivos,Ensaios Não Destrutivos
+assunto,CIE_MAT_05,CIE_MAT_05,Estrutura Atômica e Cristalina,Estrutura Atômica e Cristalina
+subassunto,CIE_MAT_05_001,CIE_MAT_05_001,Alotropia e Polimorfismo,Alotropia e Polimorfismo
+subassunto,CIE_MAT_05_002,CIE_MAT_05_002,Defeitos Cristalinos,Defeitos Cristalinos
+subassunto,CIE_MAT_05_004,CIE_MAT_05_003,Fator de Empacotamento Atômico,Fator de Empacotamento Atômico
+subassunto,CIE_MAT_05_006,CIE_MAT_05_004,Redes e Células Cristalinas,Redes e Células Cristalinas
+subassunto,CIE_MAT_05_007,CIE_MAT_05_005,Sistemas Cristalinos,Sistemas Cristalinos
+assunto,CIE_MAT_06,CIE_MAT_06,Falha e Fratura,Falha e Fratura
+subassunto,CIE_MAT_06_001,CIE_MAT_06_001,Fadiga,Fadiga
+subassunto,CIE_MAT_06_002,CIE_MAT_06_002,Fluência,Fluência
+subassunto,CIE_MAT_06_003,CIE_MAT_06_003,Fratura,Fratura
+subassunto,CIE_MAT_06_004,CIE_MAT_06_004,Tenacidade à Fratura,Tenacidade à Fratura
+assunto,CIE_MAT_10,CIE_MAT_07,Materiais Cerâmicos e Poliméricos,Materiais Cerâmicos e Poliméricos
+subassunto,CIE_MAT_10_002,CIE_MAT_07_001,Estrutura e Propriedades dos Polímeros,Estrutura e Propriedades dos Polímeros
+subassunto,CIE_MAT_10_005,CIE_MAT_07_002,"Materiais Cerâmicos, Refratários e Vidros","Materiais Cerâmicos, Refratários e Vidros"
+subassunto,CIE_MAT_10_003,CIE_MAT_07_003,Termoplásticos e Termofixos,Termoplásticos e Termofixos
+assunto,CIE_MAT_09,CIE_MAT_08,Materiais Metálicos e Ligas,Materiais Metálicos e Ligas
+subassunto,CIE_MAT_09_001,CIE_MAT_08_001,Aços,Aços
+subassunto,CIE_MAT_09_003,CIE_MAT_08_002,Ferros Fundidos,Ferros Fundidos
+subassunto,CIE_MAT_09_004,CIE_MAT_08_003,Ligas de Alumínio,Ligas de Alumínio
+subassunto,CIE_MAT_09_005,CIE_MAT_08_004,Ligas Não Ferrosas,Ligas Não Ferrosas
+assunto,CIE_MAT_11,CIE_MAT_09,Mecanismos de Endurecimento,Mecanismos de Endurecimento
+subassunto,CIE_MAT_11_001,CIE_MAT_09_001,Encruamento,Encruamento
+subassunto,CIE_MAT_11_003,CIE_MAT_09_002,Refino de Grão,Refino de Grão
+assunto,CIE_MAT_12,CIE_MAT_10,Propriedades Físicas,Propriedades Físicas
+subassunto,CIE_MAT_12_001,CIE_MAT_10_001,Propriedades Elétricas,Propriedades Elétricas
+subassunto,CIE_MAT_12_002,CIE_MAT_10_002,Propriedades Magnéticas,Propriedades Magnéticas
+subassunto,CIE_MAT_12_003,CIE_MAT_10_003,Propriedades Térmicas,Propriedades Térmicas
+assunto,CIE_MAT_13,CIE_MAT_11,Propriedades Mecânicas,Propriedades Mecânicas
+subassunto,CIE_MAT_13_001,CIE_MAT_11_001,Ductilidade e Tenacidade,Ductilidade e Tenacidade
+subassunto,CIE_MAT_13_002,CIE_MAT_11_002,Elasticidade,Elasticidade
+subassunto,CIE_MAT_13_003,CIE_MAT_11_003,Plasticidade,Plasticidade
+subassunto,CIE_MAT_13_004,CIE_MAT_11_004,Resistência e Dureza,Resistência e Dureza
+assunto,CIE_MAT_14,CIE_MAT_12,Tratamentos Térmicos,Tratamentos Térmicos
+subassunto,CIE_MAT_14_001,CIE_MAT_12_001,Recozimento e Normalização,Recozimento e Normalização
+subassunto,CIE_MAT_14_002,CIE_MAT_12_002,Têmpera e Revenimento,Têmpera e Revenimento
+subassunto,CIE_MAT_14_003,CIE_MAT_12_003,Transformações Martensíticas,Transformações Martensíticas
+subassunto,CIE_MAT_14_004,CIE_MAT_12_004,Tratamentos Termoquímicos,Tratamentos Termoquímicos
+assunto,DES_TEC_01,DES_TEC_01,CAD e Computação Gráfica,CAD e Computação Gráfica
+subassunto,DES_TEC_01_001,DES_TEC_01_001,Camadas e Propriedades,Camadas e Propriedades
+subassunto,DES_TEC_01_002,DES_TEC_01_002,Coordenadas em CAD,Coordenadas em CAD
+subassunto,DES_TEC_01_003,DES_TEC_01_003,Desenho e Edição,Desenho e Edição
+subassunto,DES_TEC_01_004,DES_TEC_01_004,Espaços de Trabalho e Layout,Espaços de Trabalho e Layout
+subassunto,DES_TEC_01_005,DES_TEC_01_005,Fundamentos de CAD,Fundamentos de CAD
+subassunto,DES_TEC_01_006,DES_TEC_01_006,Modelagem 2D e 3D,Modelagem 2D e 3D
+subassunto,DES_TEC_01_007,DES_TEC_01_007,Plotagem e Impressão,Plotagem e Impressão
+assunto,DES_TEC_04,DES_TEC_02,"Normas, Cotagem e Tolerâncias","Normas, Cotagem e Tolerâncias"
+subassunto,DES_TEC_04_007,DES_TEC_02_001,Cotagem e Dimensionamento,Cotagem e Dimensionamento
+subassunto,DES_TEC_04_008,DES_TEC_02_002,Escalas,Escalas
+subassunto,DES_TEC_04_005,DES_TEC_02_003,Normas e Convenções de Desenho,Normas e Convenções de Desenho
+subassunto,DES_TEC_04_006,DES_TEC_02_004,"Tolerâncias, Ajustes e Estado de Superfície","Tolerâncias, Ajustes e Estado de Superfície"
+assunto,DES_TEC_06,DES_TEC_03,"Projeções, Vistas e Perspectivas","Projeções, Vistas e Perspectivas"
+subassunto,DES_TEC_06_001,DES_TEC_03_001,Cortes e Seções,Cortes e Seções
+subassunto,DES_TEC_06_002,DES_TEC_03_002,Geometria Descritiva,Geometria Descritiva
+subassunto,DES_TEC_06_006,DES_TEC_03_003,Perspectivas,Perspectivas
+subassunto,DES_TEC_06_003,DES_TEC_03_004,Sistemas de Projeção e Vistas,Sistemas de Projeção e Vistas
+assunto,ENG_ECO_02,ENG_ECO_01,Análise de Investimentos,Análise de Investimentos
+subassunto,ENG_ECO_02_001,ENG_ECO_01_001,Custo Anual Equivalente,Custo Anual Equivalente
+subassunto,ENG_ECO_02_006,ENG_ECO_01_002,Depreciação,Depreciação
+subassunto,ENG_ECO_02_002,ENG_ECO_01_003,Fluxos de Caixa,Fluxos de Caixa
+subassunto,ENG_ECO_02_003,ENG_ECO_01_004,Payback,Payback
+subassunto,ENG_ECO_02_004,ENG_ECO_01_005,Taxa Interna de Retorno,Taxa Interna de Retorno
+subassunto,ENG_ECO_02_005,ENG_ECO_01_006,Valor Presente Líquido,Valor Presente Líquido
+assunto,ENG_ECO_01,ENG_ECO_02,Matemática Financeira,Matemática Financeira
+subassunto,ENG_ECO_01_001,ENG_ECO_02_001,Descontos,Descontos
+subassunto,ENG_ECO_01_002,ENG_ECO_02_002,Equivalência de Capitais,Equivalência de Capitais
+subassunto,ENG_ECO_01_003,ENG_ECO_02_003,Juros Compostos,Juros Compostos
+subassunto,ENG_ECO_01_004,ENG_ECO_02_004,Juros Simples,Juros Simples
+subassunto,ENG_ECO_01_005,ENG_ECO_02_005,Séries Uniformes de Pagamentos,Séries Uniformes de Pagamentos
+subassunto,ENG_ECO_01_006,ENG_ECO_02_006,Sistemas de Amortização,Sistemas de Amortização
+subassunto,ENG_ECO_01_007,ENG_ECO_02_007,Taxas de Juros,Taxas de Juros
+assunto,FIS_GER_01,FIS_GER_01,Eletrodinâmica,Eletrodinâmica
+subassunto,FIS_GER_01_001,FIS_GER_01_001,Associação de Resistores,Associação de Resistores
+subassunto,FIS_GER_01_002,FIS_GER_01_002,Circuitos de Corrente Contínua,Circuitos de Corrente Contínua
+subassunto,FIS_GER_01_003,FIS_GER_01_003,"Corrente, Resistência e Lei de Ohm","Corrente, Resistência e Lei de Ohm"
+subassunto,FIS_GER_01_005,FIS_GER_01_004,Potência e Energia Elétrica,Potência e Energia Elétrica
+assunto,FIS_GER_02,FIS_GER_02,Eletrostática,Eletrostática
+subassunto,FIS_GER_02_001,FIS_GER_02_001,Campo Elétrico,Campo Elétrico
+subassunto,FIS_GER_02_002,FIS_GER_02_002,Capacitância e Capacitores,Capacitância e Capacitores
+subassunto,FIS_GER_02_003,FIS_GER_02_003,Carga Elétrica e Lei de Coulomb,Carga Elétrica e Lei de Coulomb
+subassunto,FIS_GER_02_005,FIS_GER_02_004,Potencial Elétrico,Potencial Elétrico
+assunto,FIS_GER_03,FIS_GER_03,Física Moderna,Física Moderna
+subassunto,FIS_GER_03_001,FIS_GER_03_001,Estrutura Atômica e Física Nuclear,Estrutura Atômica e Física Nuclear
+assunto,FIS_GER_04,FIS_GER_04,Magnetismo e Indução Eletromagnética,Magnetismo e Indução Eletromagnética
+subassunto,FIS_GER_04_001,FIS_GER_04_001,Campo Magnético,Campo Magnético
+subassunto,FIS_GER_04_002,FIS_GER_04_002,Força Magnética,Força Magnética
+subassunto,FIS_GER_04_003,FIS_GER_04_003,Indução Eletromagnética e Lei de Faraday-Lenz,Indução Eletromagnética e Lei de Faraday-Lenz
+assunto,FIS_GER_05,FIS_GER_05,"Ondas, Acústica e Óptica","Ondas, Acústica e Óptica"
+subassunto,FIS_GER_05_001,FIS_GER_05_001,Acústica,Acústica
+subassunto,FIS_GER_05_002,FIS_GER_05_002,Fenômenos Ondulatórios,Fenômenos Ondulatórios
+subassunto,FIS_GER_05_003,FIS_GER_05_003,Ondas Mecânicas,Ondas Mecânicas
+subassunto,FIS_GER_05_004,FIS_GER_05_004,Óptica Geométrica,Óptica Geométrica
+assunto,MAT_BAS_01,MAT_BAS_01,Álgebra Elementar,Álgebra Elementar
+subassunto,MAT_BAS_01_001,MAT_BAS_01_001,Equações do 1º Grau,Equações do 1º Grau
+subassunto,MAT_BAS_01_002,MAT_BAS_01_002,Equações do 2º Grau,Equações do 2º Grau
+subassunto,MAT_BAS_01_004,MAT_BAS_01_003,Inequações,Inequações
+subassunto,MAT_BAS_01_005,MAT_BAS_01_004,Sistemas de Equações do 1º Grau,Sistemas de Equações do 1º Grau
+assunto,MAT_BAS_02,MAT_BAS_02,Análise Combinatória,Análise Combinatória
+subassunto,MAT_BAS_02_001,MAT_BAS_02_001,Arranjos,Arranjos
+subassunto,MAT_BAS_02_002,MAT_BAS_02_002,Combinações,Combinações
+subassunto,MAT_BAS_02_005,MAT_BAS_02_003,Permutações,Permutações
+subassunto,MAT_BAS_02_007,MAT_BAS_02_004,Princípio Fundamental da Contagem,Princípio Fundamental da Contagem
+assunto,MAT_BAS_03,MAT_BAS_03,Aritmética e Proporcionalidade,Aritmética e Proporcionalidade
+subassunto,MAT_BAS_03_002,MAT_BAS_03_001,Divisão Proporcional,Divisão Proporcional
+subassunto,MAT_BAS_03_003,MAT_BAS_03_002,Divisibilidade,Divisibilidade
+subassunto,MAT_BAS_03_004,MAT_BAS_03_003,Frações,Frações
+subassunto,MAT_BAS_03_005,MAT_BAS_03_004,MDC e MMC,MDC e MMC
+subassunto,MAT_BAS_03_007,MAT_BAS_03_005,Operações Fundamentais,Operações Fundamentais
+subassunto,MAT_BAS_03_008,MAT_BAS_03_006,Porcentagem,Porcentagem
+subassunto,MAT_BAS_03_009,MAT_BAS_03_007,Potenciação e Radiciação,Potenciação e Radiciação
+subassunto,MAT_BAS_03_010,MAT_BAS_03_008,Razões e Proporções,Razões e Proporções
+subassunto,MAT_BAS_03_011,MAT_BAS_03_009,Regra de Três,Regra de Três
+subassunto,MAT_BAS_03_012,MAT_BAS_03_010,Unidades e Conversões,Unidades e Conversões
+assunto,MAT_BAS_04,MAT_BAS_04,Funções,Funções
+subassunto,MAT_BAS_04_001,MAT_BAS_04_001,Função Afim,Função Afim
+subassunto,MAT_BAS_04_003,MAT_BAS_04_002,Função Exponencial,Função Exponencial
+subassunto,MAT_BAS_04_004,MAT_BAS_04_003,Função Logarítmica,Função Logarítmica
+subassunto,MAT_BAS_04_005,MAT_BAS_04_004,Função Quadrática,Função Quadrática
+subassunto,MAT_BAS_04_006,MAT_BAS_04_005,Propriedades e Operações com Funções,Propriedades e Operações com Funções
+assunto,MAT_BAS_11,MAT_BAS_05,Geometria Analítica,Geometria Analítica
+subassunto,MAT_BAS_11_002,MAT_BAS_05_001,Cônicas e Circunferência,Cônicas e Circunferência
+subassunto,MAT_BAS_11_001,MAT_BAS_05_002,Retas no Plano,Retas no Plano
+subassunto,MAT_BAS_11_003,MAT_BAS_05_003,Sistemas de Coordenadas e Geometria Espacial,Sistemas de Coordenadas e Geometria Espacial
+subassunto,MAT_BAS_11_004,MAT_BAS_05_004,Vetores e Operações Vetoriais,Vetores e Operações Vetoriais
+assunto,MAT_BAS_05,MAT_BAS_06,Geometria Espacial,Geometria Espacial
+subassunto,MAT_BAS_05_001,MAT_BAS_06_001,Áreas e Volumes,Áreas e Volumes
+subassunto,MAT_BAS_05_002,MAT_BAS_06_002,Cilindros,Cilindros
+subassunto,MAT_BAS_05_003,MAT_BAS_06_003,Cones,Cones
+subassunto,MAT_BAS_05_004,MAT_BAS_06_004,Esferas,Esferas
+subassunto,MAT_BAS_05_007,MAT_BAS_06_005,"Prismas, Pirâmides e Poliedros","Prismas, Pirâmides e Poliedros"
+subassunto,MAT_BAS_05_008,MAT_BAS_06_006,Troncos,Troncos
+assunto,MAT_BAS_06,MAT_BAS_07,Geometria Plana,Geometria Plana
+subassunto,MAT_BAS_06_002,MAT_BAS_07_001,Áreas e Perímetros,Áreas e Perímetros
+subassunto,MAT_BAS_06_003,MAT_BAS_07_002,Circunferência e Círculo,Circunferência e Círculo
+subassunto,MAT_BAS_06_005,MAT_BAS_07_003,Semelhança e Teorema de Tales,Semelhança e Teorema de Tales
+subassunto,MAT_BAS_06_006,MAT_BAS_07_004,Teorema de Pitágoras,Teorema de Pitágoras
+assunto,MAT_BAS_08,MAT_BAS_08,Sequências e Progressões,Sequências e Progressões
+subassunto,MAT_BAS_08_001,MAT_BAS_08_001,Progressão Aritmética,Progressão Aritmética
+subassunto,MAT_BAS_08_002,MAT_BAS_08_002,Progressão Geométrica,Progressão Geométrica
+subassunto,MAT_BAS_08_003,MAT_BAS_08_003,Sequências Recorrentes,Sequências Recorrentes
+assunto,MAT_BAS_09,MAT_BAS_09,Teoria dos Conjuntos,Teoria dos Conjuntos
+subassunto,MAT_BAS_09_002,MAT_BAS_09_001,Diagramas de Venn,Diagramas de Venn
+subassunto,MAT_BAS_09_003,MAT_BAS_09_002,Operações com Conjuntos,Operações com Conjuntos
+subassunto,MAT_BAS_09_004,MAT_BAS_09_003,Relações de Pertinência e Inclusão,Relações de Pertinência e Inclusão
+assunto,MAT_BAS_10,MAT_BAS_10,Trigonometria,Trigonometria
+subassunto,MAT_BAS_10_001,MAT_BAS_10_001,Equações Trigonométricas,Equações Trigonométricas
+subassunto,MAT_BAS_10_002,MAT_BAS_10_002,Funções Trigonométricas,Funções Trigonométricas
+subassunto,MAT_BAS_10_003,MAT_BAS_10_003,Identidades Trigonométricas,Identidades Trigonométricas
+subassunto,MAT_BAS_10_004,MAT_BAS_10_004,Leis dos Senos e Cossenos,Leis dos Senos e Cossenos
+subassunto,MAT_BAS_10_006,MAT_BAS_10_005,Trigonometria em Triângulos,Trigonometria em Triângulos
+assunto,MEC_FLU_01,MEC_FLU_01,Análise Dimensional e Semelhança,Análise Dimensional e Semelhança
+subassunto,MEC_FLU_01_001,MEC_FLU_01_001,Homogeneidade Dimensional,Homogeneidade Dimensional
+subassunto,MEC_FLU_01_002,MEC_FLU_01_002,Números Adimensionais,Números Adimensionais
+subassunto,MEC_FLU_01_003,MEC_FLU_01_003,Teorema de Buckingham Pi,Teorema de Buckingham Pi
+subassunto,MEC_FLU_01_004,MEC_FLU_01_004,Teoria de Modelos e Semelhança,Teoria de Modelos e Semelhança
+assunto,MEC_FLU_02,MEC_FLU_02,Cinemática dos Fluidos,Cinemática dos Fluidos
+subassunto,MEC_FLU_02_002,MEC_FLU_02_001,Campo de Velocidade,Campo de Velocidade
+subassunto,MEC_FLU_02_004,MEC_FLU_02_002,Vazão e Velocidade Média,Vazão e Velocidade Média
+assunto,MEC_FLU_03,MEC_FLU_03,Dinâmica dos Fluidos,Dinâmica dos Fluidos
+subassunto,MEC_FLU_03_002,MEC_FLU_03_001,Conservação da Massa e Equação da Continuidade,Conservação da Massa e Equação da Continuidade
+subassunto,MEC_FLU_03_003,MEC_FLU_03_002,Equação de Bernoulli,Equação de Bernoulli
+subassunto,MEC_FLU_03_004,MEC_FLU_03_003,Quantidade de Movimento,Quantidade de Movimento
+subassunto,MEC_FLU_03_005,MEC_FLU_03_004,Volume de Controle,Volume de Controle
+assunto,MEC_FLU_04,MEC_FLU_04,Escoamento Externo,Escoamento Externo
+subassunto,MEC_FLU_04_001,MEC_FLU_04_001,Arrasto,Arrasto
+subassunto,MEC_FLU_04_002,MEC_FLU_04_002,Camada Limite,Camada Limite
+assunto,MEC_FLU_05,MEC_FLU_05,Escoamento Interno em Condutos,Escoamento Interno em Condutos
+subassunto,MEC_FLU_05_001,MEC_FLU_05_001,Cavitação,Cavitação
+subassunto,MEC_FLU_05_003,MEC_FLU_05_002,Equação de Hagen-Poiseuille,Equação de Hagen-Poiseuille
+subassunto,MEC_FLU_05_004,MEC_FLU_05_003,Fator de Atrito,Fator de Atrito
+subassunto,MEC_FLU_05_005,MEC_FLU_05_004,Número de Reynolds,Número de Reynolds
+subassunto,MEC_FLU_05_006,MEC_FLU_05_005,Perdas de Carga e Equação de Darcy-Weisbach,Perdas de Carga e Equação de Darcy-Weisbach
+subassunto,MEC_FLU_05_007,MEC_FLU_05_006,Regimes Laminar e Turbulento,Regimes Laminar e Turbulento
+subassunto,MEC_FLU_05_008,MEC_FLU_05_007,Sistemas de Tubulações,Sistemas de Tubulações
+assunto,MEC_FLU_06,MEC_FLU_06,Estática dos Fluidos,Estática dos Fluidos
+subassunto,MEC_FLU_06_001,MEC_FLU_06_001,Empuxo e Princípio de Arquimedes,Empuxo e Princípio de Arquimedes
+subassunto,MEC_FLU_06_002,MEC_FLU_06_002,Forças Hidrostáticas,Forças Hidrostáticas
+subassunto,MEC_FLU_06_003,MEC_FLU_06_003,Manometria,Manometria
+subassunto,MEC_FLU_06_004,MEC_FLU_06_004,Pressão Hidrostática e Teorema de Stevin,Pressão Hidrostática e Teorema de Stevin
+subassunto,MEC_FLU_06_006,MEC_FLU_06_005,Princípio de Pascal,Princípio de Pascal
+assunto,MEC_FLU_07,MEC_FLU_07,Medição de Escoamentos,Medição de Escoamentos
+subassunto,MEC_FLU_07_001,MEC_FLU_07_001,Outros Medidores de Vazão,Outros Medidores de Vazão
+subassunto,MEC_FLU_07_002,MEC_FLU_07_002,Placa de Orifício,Placa de Orifício
+subassunto,MEC_FLU_07_003,MEC_FLU_07_003,Tubo de Pitot,Tubo de Pitot
+subassunto,MEC_FLU_07_004,MEC_FLU_07_004,Tubo de Venturi,Tubo de Venturi
+assunto,MEC_FLU_08,MEC_FLU_08,Propriedades dos Fluidos,Propriedades dos Fluidos
+subassunto,MEC_FLU_08_001,MEC_FLU_08_001,Compressibilidade,Compressibilidade
+subassunto,MEC_FLU_08_002,MEC_FLU_08_002,Fluidos Newtonianos e Não Newtonianos,Fluidos Newtonianos e Não Newtonianos
+subassunto,MEC_FLU_08_003,MEC_FLU_08_003,"Massa Específica, Peso Específico e Densidade","Massa Específica, Peso Específico e Densidade"
+subassunto,MEC_FLU_08_004,MEC_FLU_08_004,Tensão Superficial e Capilaridade,Tensão Superficial e Capilaridade
+subassunto,MEC_FLU_08_005,MEC_FLU_08_005,Viscosidade,Viscosidade
+assunto,MEC_GER_01,MEC_GER_01,Cinemática da Partícula,Cinemática da Partícula
+subassunto,MEC_GER_01_001,MEC_GER_01_001,Movimento Circular,Movimento Circular
+subassunto,MEC_GER_01_002,MEC_GER_01_002,Movimento Curvilíneo,Movimento Curvilíneo
+subassunto,MEC_GER_01_003,MEC_GER_01_003,Movimento Retilíneo,Movimento Retilíneo
+assunto,MEC_GER_02,MEC_GER_02,Cinemática do Corpo Rígido,Cinemática do Corpo Rígido
+subassunto,MEC_GER_02_001,MEC_GER_02_001,Movimento Plano,Movimento Plano
+subassunto,MEC_GER_02_002,MEC_GER_02_002,Rotação em Eixo Fixo,Rotação em Eixo Fixo
+assunto,MEC_GER_03,MEC_GER_03,Dinâmica da Partícula,Dinâmica da Partícula
+subassunto,MEC_GER_03_001,MEC_GER_03_001,Impulso e Quantidade de Movimento,Impulso e Quantidade de Movimento
+subassunto,MEC_GER_03_002,MEC_GER_03_002,Leis de Newton,Leis de Newton
+subassunto,MEC_GER_03_003,MEC_GER_03_003,Trabalho e Energia,Trabalho e Energia
+assunto,MEC_GER_04,MEC_GER_04,Dinâmica do Corpo Rígido,Dinâmica do Corpo Rígido
+subassunto,MEC_GER_04_001,MEC_GER_04_001,Equações do Movimento,Equações do Movimento
+subassunto,MEC_GER_04_003,MEC_GER_04_002,Momento de Inércia de Massa,Momento de Inércia de Massa
+assunto,MEC_GER_05,MEC_GER_05,Estática,Estática
+subassunto,MEC_GER_05_001,MEC_GER_05_001,Atrito,Atrito
+subassunto,MEC_GER_05_002,MEC_GER_05_002,Centroides e Centros de Massa,Centroides e Centros de Massa
+subassunto,MEC_GER_05_003,MEC_GER_05_003,Equilíbrio de Corpos Rígidos,Equilíbrio de Corpos Rígidos
+subassunto,MEC_GER_05_004,MEC_GER_05_004,Momentos e Binários,Momentos e Binários
+subassunto,MEC_GER_05_005,MEC_GER_05_005,Reações de Apoio,Reações de Apoio
+assunto,METROL_01,METROL_01,Calibração e Rastreabilidade,Calibração e Rastreabilidade
+subassunto,METROL_01_001,METROL_01_001,Calibração,Calibração
+subassunto,METROL_01_003,METROL_01_002,Rastreabilidade,Rastreabilidade
+assunto,METROL_02,METROL_02,Erros e Incertezas de Medição,Erros e Incertezas de Medição
+subassunto,METROL_02_001,METROL_02_001,Erros Aleatórios e Sistemáticos,Erros Aleatórios e Sistemáticos
+subassunto,METROL_02_002,METROL_02_002,Incerteza de Medição,Incerteza de Medição
+assunto,METROL_03,METROL_03,Fundamentos de Metrologia,Fundamentos de Metrologia
+subassunto,METROL_03_002,METROL_03_001,Conceitos Fundamentais,Conceitos Fundamentais
+subassunto,METROL_03_003,METROL_03_002,"Exatidão, Precisão, Repetibilidade e Reprodutibilidade","Exatidão, Precisão, Repetibilidade e Reprodutibilidade"
+assunto,METROL_06,METROL_04,Instrumentos de Medição,Instrumentos de Medição
+subassunto,METROL_06_001,METROL_04_001,Instrumentos de Medição Dimensional,Instrumentos de Medição Dimensional
+subassunto,METROL_06_002,METROL_04_002,Sensores e Transdutores,Sensores e Transdutores
+assunto,METROL_05,METROL_05,Sistema Internacional de Unidades,Sistema Internacional de Unidades
+subassunto,METROL_05_001,METROL_05_001,Grandezas e Unidades,Grandezas e Unidades
+subassunto,METROL_05_002,METROL_05_002,Prefixos e Conversões,Prefixos e Conversões
+subassunto,METROL_05_003,METROL_05_003,Unidades SI,Unidades SI
+assunto,METROL_07,METROL_06,Tolerâncias e Ajustes,Tolerâncias e Ajustes
+subassunto,METROL_07_002,METROL_06_001,"Folgas, Interferências e Tolerância Dimensional","Folgas, Interferências e Tolerância Dimensional"
+subassunto,METROL_07_001,METROL_06_002,Sistema de Ajustes (Furo-Base e Eixo-Base),Sistema de Ajustes (Furo-Base e Eixo-Base)
+assunto,PRB_EST_01,PRB_EST_01,Correlação e Regressão,Correlação e Regressão
+subassunto,PRB_EST_01_001,PRB_EST_01_001,Coeficientes de Ajuste e Determinação,Coeficientes de Ajuste e Determinação
+subassunto,PRB_EST_01_002,PRB_EST_01_002,"Correlação, Covariância e Diagrama de Dispersão","Correlação, Covariância e Diagrama de Dispersão"
+subassunto,PRB_EST_01_003,PRB_EST_01_003,Interpretação e Ajuste de Modelos Lineares,Interpretação e Ajuste de Modelos Lineares
+subassunto,PRB_EST_01_004,PRB_EST_01_004,Regressão Linear e Mínimos Quadrados,Regressão Linear e Mínimos Quadrados
+assunto,PRB_EST_02,PRB_EST_02,Estatística Descritiva,Estatística Descritiva
+subassunto,PRB_EST_02_002,PRB_EST_02_001,"Boxplot, Quartis e Outliers","Boxplot, Quartis e Outliers"
+subassunto,PRB_EST_02_003,PRB_EST_02_002,"Gráficos, Tabelas e Tendências","Gráficos, Tabelas e Tendências"
+subassunto,PRB_EST_02_004,PRB_EST_02_003,Medidas de Dispersão e Forma,Medidas de Dispersão e Forma
+subassunto,PRB_EST_02_005,PRB_EST_02_004,Medidas de Tendência Central,Medidas de Tendência Central
+assunto,PRB_EST_03,PRB_EST_03,Inferência Estatística,Inferência Estatística
+subassunto,PRB_EST_03_001,PRB_EST_03_001,Amostragem Estatística,Amostragem Estatística
+subassunto,PRB_EST_03_002,PRB_EST_03_002,Delineamento Experimental e ANOVA,Delineamento Experimental e ANOVA
+subassunto,PRB_EST_03_003,PRB_EST_03_003,Distribuições Amostrais e Estimação,Distribuições Amostrais e Estimação
+subassunto,PRB_EST_03_004,PRB_EST_03_004,Intervalos de Confiança,Intervalos de Confiança
+subassunto,PRB_EST_03_006,PRB_EST_03_005,Testes de Hipóteses e Significância,Testes de Hipóteses e Significância
+assunto,PRB_EST_04,PRB_EST_04,Probabilidade,Probabilidade
+subassunto,PRB_EST_04_001,PRB_EST_04_001,Árvores de Eventos,Árvores de Eventos
+subassunto,PRB_EST_04_002,PRB_EST_04_002,"Fundamentos, Espaço Amostral e Axiomas","Fundamentos, Espaço Amostral e Axiomas"
+subassunto,PRB_EST_04_003,PRB_EST_04_003,"Independência, Dependência e Ensaios Sucessivos","Independência, Dependência e Ensaios Sucessivos"
+subassunto,PRB_EST_04_004,PRB_EST_04_004,Operações com Eventos,Operações com Eventos
+subassunto,PRB_EST_04_005,PRB_EST_04_005,Probabilidade Clássica e Métodos Combinatórios,Probabilidade Clássica e Métodos Combinatórios
+subassunto,PRB_EST_04_006,PRB_EST_04_006,"Probabilidade Condicional, Bayes e Probabilidade Total","Probabilidade Condicional, Bayes e Probabilidade Total"
+subassunto,PRB_EST_04_008,PRB_EST_04_007,Probabilidade em Amostragem Finita,Probabilidade em Amostragem Finita
+assunto,PRB_EST_05,PRB_EST_05,Variáveis Aleatórias e Distribuições,Variáveis Aleatórias e Distribuições
+subassunto,PRB_EST_05_001,PRB_EST_05_001,Conceitos Gerais de Variáveis Aleatórias,Conceitos Gerais de Variáveis Aleatórias
+subassunto,PRB_EST_05_002,PRB_EST_05_002,Distribuição Binomial e Bernoulli,Distribuição Binomial e Bernoulli
+subassunto,PRB_EST_05_003,PRB_EST_05_003,Distribuição de Poisson,Distribuição de Poisson
+subassunto,PRB_EST_05_005,PRB_EST_05_004,Distribuição Exponencial e Weibull,Distribuição Exponencial e Weibull
+subassunto,PRB_EST_05_006,PRB_EST_05_005,Distribuição Geométrica,Distribuição Geométrica
+subassunto,PRB_EST_05_007,PRB_EST_05_006,Distribuição Hipergeométrica,Distribuição Hipergeométrica
+subassunto,PRB_EST_05_008,PRB_EST_05_007,Distribuição Normal e Teorema Central do Limite,Distribuição Normal e Teorema Central do Limite
+subassunto,PRB_EST_05_010,PRB_EST_05_008,"Esperança, Variância e Momentos","Esperança, Variância e Momentos"
+subassunto,PRB_EST_05_004,PRB_EST_05_009,Função de Distribuição e Densidade de Probabilidade,Função de Distribuição e Densidade de Probabilidade
+assunto,QUI_GER_01,QUI_GER_01,Cinética Química,Cinética Química
+subassunto,QUI_GER_01_002,QUI_GER_01_001,Fatores que Afetam a Velocidade de Reação,Fatores que Afetam a Velocidade de Reação
+subassunto,QUI_GER_01_003,QUI_GER_01_002,"Lei de Velocidade, Ordem de Reação e Arrhenius","Lei de Velocidade, Ordem de Reação e Arrhenius"
+assunto,QUI_GER_02,QUI_GER_02,Eletroquímica,Eletroquímica
+subassunto,QUI_GER_02_001,QUI_GER_02_001,Eletrólise,Eletrólise
+subassunto,QUI_GER_02_003,QUI_GER_02_002,Oxidação e Redução,Oxidação e Redução
+subassunto,QUI_GER_02_004,QUI_GER_02_003,Pilhas e Potenciais Eletroquímicos,Pilhas e Potenciais Eletroquímicos
+assunto,QUI_GER_03,QUI_GER_03,Equilíbrio Químico,Equilíbrio Químico
+subassunto,QUI_GER_03_001,QUI_GER_03_001,Equilíbrio Ácido-Base,Equilíbrio Ácido-Base
+subassunto,QUI_GER_03_002,QUI_GER_03_002,Equilíbrio de Solubilidade,Equilíbrio de Solubilidade
+subassunto,QUI_GER_03_003,QUI_GER_03_003,Equilíbrio Químico e Constantes,Equilíbrio Químico e Constantes
+subassunto,QUI_GER_03_004,QUI_GER_03_004,Princípio de Le Chatelier,Princípio de Le Chatelier
+assunto,QUI_GER_04,QUI_GER_04,Estequiometria,Estequiometria
+subassunto,QUI_GER_04_002,QUI_GER_04_001,Cálculos Estequiométricos,Cálculos Estequiométricos
+subassunto,QUI_GER_04_004,QUI_GER_04_002,Reagente Limitante e Rendimento,Reagente Limitante e Rendimento
+assunto,QUI_GER_05,QUI_GER_05,Estrutura Atômica e Periodicidade,Estrutura Atômica e Periodicidade
+subassunto,QUI_GER_05_001,QUI_GER_05_001,Estrutura Atômica,Estrutura Atômica
+subassunto,QUI_GER_05_003,QUI_GER_05_002,Ligações Químicas e Geometria Molecular,Ligações Químicas e Geometria Molecular
+subassunto,QUI_GER_05_004,QUI_GER_05_003,Propriedades Periódicas,Propriedades Periódicas
+assunto,QUI_GER_06,QUI_GER_06,Funções Inorgânicas e Reações Químicas,Funções Inorgânicas e Reações Químicas
+subassunto,QUI_GER_06_001,QUI_GER_06_001,Funções Inorgânicas,Funções Inorgânicas
+assunto,QUI_GER_07,QUI_GER_07,Soluções,Soluções
+subassunto,QUI_GER_07_001,QUI_GER_07_001,Concentração de Soluções,Concentração de Soluções
+subassunto,QUI_GER_07_002,QUI_GER_07_002,Diluição e Mistura de Soluções,Diluição e Mistura de Soluções
+subassunto,QUI_GER_07_003,QUI_GER_07_003,Propriedades das Soluções,Propriedades das Soluções
+assunto,RES_MAT_01,RES_MAT_01,Critérios de Falha,Critérios de Falha
+subassunto,RES_MAT_01_001,RES_MAT_01_001,Critério de Rankine,Critério de Rankine
+subassunto,RES_MAT_01_002,RES_MAT_01_002,Critério de Tresca,Critério de Tresca
+subassunto,RES_MAT_01_003,RES_MAT_01_003,Critério de von Mises,Critério de von Mises
+subassunto,RES_MAT_01_004,RES_MAT_01_004,Critérios de Mohr,Critérios de Mohr
+assunto,RES_MAT_02,RES_MAT_02,Esforços Solicitantes e Diagramas,Esforços Solicitantes e Diagramas
+subassunto,RES_MAT_02_001,RES_MAT_02_001,Diagramas de Esforços Internos,Diagramas de Esforços Internos
+subassunto,RES_MAT_02_002,RES_MAT_02_002,Esforço Cortante,Esforço Cortante
+subassunto,RES_MAT_02_003,RES_MAT_02_003,Esforço Normal,Esforço Normal
+subassunto,RES_MAT_02_004,RES_MAT_02_004,Momento Fletor,Momento Fletor
+assunto,RES_MAT_03,RES_MAT_03,Flambagem e Estabilidade,Flambagem e Estabilidade
+subassunto,RES_MAT_03_002,RES_MAT_03_001,Comprimento Efetivo,Comprimento Efetivo
+subassunto,RES_MAT_03_003,RES_MAT_03_002,Flambagem de Colunas e Carga Crítica de Euler,Flambagem de Colunas e Carga Crítica de Euler
+assunto,RES_MAT_04,RES_MAT_04,"Flexão, Cisalhamento e Deflexão em Vigas","Flexão, Cisalhamento e Deflexão em Vigas"
+subassunto,RES_MAT_04_002,RES_MAT_04_001,Deflexão de Vigas e Linha Elástica,Deflexão de Vigas e Linha Elástica
+subassunto,RES_MAT_04_003,RES_MAT_04_002,Flexão em Vigas,Flexão em Vigas
+assunto,RES_MAT_05,RES_MAT_05,Propriedades Geométricas de Seções Planas,Propriedades Geométricas de Seções Planas
+subassunto,RES_MAT_05_001,RES_MAT_05_001,Centroide,Centroide
+subassunto,RES_MAT_05_002,RES_MAT_05_002,Momento de Inércia de Área,Momento de Inércia de Área
+subassunto,RES_MAT_05_004,RES_MAT_05_003,Teorema dos Eixos Paralelos,Teorema dos Eixos Paralelos
+assunto,RES_MAT_06,RES_MAT_06,"Tensão, Deformação e Carregamento Axial","Tensão, Deformação e Carregamento Axial"
+subassunto,RES_MAT_06_001,RES_MAT_06_001,Carregamento Axial,Carregamento Axial
+subassunto,RES_MAT_06_002,RES_MAT_06_002,Deformação Axial,Deformação Axial
+subassunto,RES_MAT_06_007,RES_MAT_06_003,Deformação e Tensão Térmica,Deformação e Tensão Térmica
+subassunto,RES_MAT_06_003,RES_MAT_06_004,Lei de Hooke e Módulo de Elasticidade,Lei de Hooke e Módulo de Elasticidade
+subassunto,RES_MAT_06_005,RES_MAT_06_005,Razão de Poisson,Razão de Poisson
+subassunto,RES_MAT_06_006,RES_MAT_06_006,Tensão e Deformação,Tensão e Deformação
+assunto,RES_MAT_07,RES_MAT_07,Tensões e Deformações Planas,Tensões e Deformações Planas
+subassunto,RES_MAT_07_001,RES_MAT_07_001,Círculo de Mohr,Círculo de Mohr
+subassunto,RES_MAT_07_003,RES_MAT_07_002,Tensões Principais,Tensões Principais
+subassunto,RES_MAT_07_004,RES_MAT_07_003,Transformação de Tensões,Transformação de Tensões
+subassunto,RES_MAT_07_005,RES_MAT_07_004,Vasos de Pressão de Parede Fina,Vasos de Pressão de Parede Fina
+assunto,RES_MAT_09,RES_MAT_08,Torção,Torção
+subassunto,RES_MAT_09_001,RES_MAT_08_001,Ângulo de Torção,Ângulo de Torção
+subassunto,RES_MAT_09_002,RES_MAT_08_002,Eixos Circulares,Eixos Circulares
+assunto,TERMOD_01,TERMOD_01,Calorimetria,Calorimetria
+subassunto,TERMOD_01_003,TERMOD_01_001,Calor Sensível e Latente,Calor Sensível e Latente
+subassunto,TERMOD_01_004,TERMOD_01_002,Capacidade Calorífica,Capacidade Calorífica
+assunto,TERMOD_02,TERMOD_02,Ciclos de Potência,Ciclos de Potência
+subassunto,TERMOD_02_001,TERMOD_02_001,Ciclo Brayton,Ciclo Brayton
+subassunto,TERMOD_02_002,TERMOD_02_002,Ciclo Diesel,Ciclo Diesel
+subassunto,TERMOD_02_003,TERMOD_02_003,Ciclo Otto,Ciclo Otto
+subassunto,TERMOD_02_004,TERMOD_02_004,Ciclo Rankine,Ciclo Rankine
+subassunto,TERMOD_02_005,TERMOD_02_005,"Regeneração, Reaquecimento e Inter-resfriamento","Regeneração, Reaquecimento e Inter-resfriamento"
+subassunto,TERMOD_02_006,TERMOD_02_006,Rendimento Térmico de Ciclos,Rendimento Térmico de Ciclos
+assunto,TERMOD_03,TERMOD_03,Equilíbrio de Fases,Equilíbrio de Fases
+subassunto,TERMOD_03_001,TERMOD_03_001,Diagramas de Fases,Diagramas de Fases
+subassunto,TERMOD_03_003,TERMOD_03_002,Lei de Raoult e Pontos de Bolha e Orvalho,Lei de Raoult e Pontos de Bolha e Orvalho
+subassunto,TERMOD_03_006,TERMOD_03_003,Regra das Fases de Gibbs e Potencial Químico,Regra das Fases de Gibbs e Potencial Químico
+assunto,TERMOD_04,TERMOD_04,Fundamentos da Termodinâmica,Fundamentos da Termodinâmica
+subassunto,TERMOD_04_001,TERMOD_04_001,"Conceitos, Estado e Lei Zero","Conceitos, Estado e Lei Zero"
+subassunto,TERMOD_04_003,TERMOD_04_002,Processos Termodinâmicos,Processos Termodinâmicos
+subassunto,TERMOD_04_004,TERMOD_04_003,Propriedades Intensivas e Extensivas,Propriedades Intensivas e Extensivas
+assunto,TERMOD_05,TERMOD_05,Gases e Equações de Estado,Gases e Equações de Estado
+subassunto,TERMOD_05_001,TERMOD_05_001,Equações de Estado de Gases Reais,Equações de Estado de Gases Reais
+subassunto,TERMOD_05_002,TERMOD_05_002,Fator de Compressibilidade,Fator de Compressibilidade
+subassunto,TERMOD_05_003,TERMOD_05_003,Gás Ideal,Gás Ideal
+subassunto,TERMOD_05_004,TERMOD_05_004,Misturas de Gases e Lei de Dalton,Misturas de Gases e Lei de Dalton
+assunto,TERMOD_06,TERMOD_06,Primeira Lei da Termodinâmica,Primeira Lei da Termodinâmica
+subassunto,TERMOD_06_001,TERMOD_06_001,Balanço de Energia em Sistemas Fechados,Balanço de Energia em Sistemas Fechados
+subassunto,TERMOD_06_002,TERMOD_06_002,Balanço de Energia em Volumes de Controle,Balanço de Energia em Volumes de Controle
+subassunto,TERMOD_06_003,TERMOD_06_003,Efeito Joule-Thomson,Efeito Joule-Thomson
+subassunto,TERMOD_06_004,TERMOD_06_004,Entalpia e Energia Interna,Entalpia e Energia Interna
+subassunto,TERMOD_06_005,TERMOD_06_005,Equipamentos de Escoamento Permanente,Equipamentos de Escoamento Permanente
+subassunto,TERMOD_06_006,TERMOD_06_006,Trabalho e Calor,Trabalho e Calor
+assunto,TERMOD_07,TERMOD_07,Propriedades de Substâncias Puras,Propriedades de Substâncias Puras
+subassunto,TERMOD_07_001,TERMOD_07_001,Diagramas de Propriedades,Diagramas de Propriedades
+subassunto,TERMOD_07_002,TERMOD_07_002,Estados de Saturação e Título,Estados de Saturação e Título
+subassunto,TERMOD_07_003,TERMOD_07_003,Ponto Crítico e Ponto Triplo,Ponto Crítico e Ponto Triplo
+assunto,TERMOD_08,TERMOD_08,Psicrometria,Psicrometria
+subassunto,TERMOD_08_001,TERMOD_08_001,Carta Psicrométrica,Carta Psicrométrica
+subassunto,TERMOD_08_004,TERMOD_08_002,Processos Psicrométricos,Processos Psicrométricos
+subassunto,TERMOD_08_006,TERMOD_08_003,Umidade e Ponto de Orvalho,Umidade e Ponto de Orvalho
+assunto,TERMOD_09,TERMOD_09,Refrigeração e Bombas de Calor,Refrigeração e Bombas de Calor
+subassunto,TERMOD_09_001,TERMOD_09_001,Bombas de Calor,Bombas de Calor
+subassunto,TERMOD_09_002,TERMOD_09_002,Ciclo de Compressão de Vapor,Ciclo de Compressão de Vapor
+subassunto,TERMOD_09_003,TERMOD_09_003,Coeficiente de Performance,Coeficiente de Performance
+subassunto,TERMOD_09_004,TERMOD_09_004,Refrigeração de Carnot,Refrigeração de Carnot
+assunto,TERMOD_10,TERMOD_10,Relações Termodinâmicas,Relações Termodinâmicas
+subassunto,TERMOD_10_001,TERMOD_10_001,Funções de Gibbs e Helmholtz,Funções de Gibbs e Helmholtz
+subassunto,TERMOD_10_002,TERMOD_10_002,Relações de Maxwell,Relações de Maxwell
+subassunto,TERMOD_10_003,TERMOD_10_003,Relações entre Propriedades Termodinâmicas,Relações entre Propriedades Termodinâmicas
+assunto,TERMOD_11,TERMOD_11,Segunda Lei da Termodinâmica,Segunda Lei da Termodinâmica
+subassunto,TERMOD_11_001,TERMOD_11_001,Ciclo de Carnot,Ciclo de Carnot
+subassunto,TERMOD_11_003,TERMOD_11_002,Entropia,Entropia
+subassunto,TERMOD_11_005,TERMOD_11_003,"Irreversibilidade, Exergia e Rendimento de Segunda Lei","Irreversibilidade, Exergia e Rendimento de Segunda Lei"
+assunto,TERMOD_12,TERMOD_12,Termoquímica e Combustão,Termoquímica e Combustão
+subassunto,TERMOD_12_001,TERMOD_12_001,Combustão Estequiométrica,Combustão Estequiométrica
+subassunto,TERMOD_12_002,TERMOD_12_002,Entalpia de Formação e Reação,Entalpia de Formação e Reação
+subassunto,TERMOD_12_003,TERMOD_12_003,Poder Calorífico,Poder Calorífico
+assunto,TRA_CAL_02,TRA_CAL_01,Condução Térmica,Condução Térmica
+subassunto,TRA_CAL_02_008,TRA_CAL_01_001,Aletas,Aletas
+subassunto,TRA_CAL_02_001,TRA_CAL_01_002,Condução Cilíndrica,Condução Cilíndrica
+subassunto,TRA_CAL_02_003,TRA_CAL_01_003,Condução Transiente,Condução Transiente
+subassunto,TRA_CAL_02_007,TRA_CAL_01_004,Propriedades Térmicas,Condutividade e Difusividade Térmica
+subassunto,TRA_CAL_02_004,TRA_CAL_01_005,Geração Interna de Calor,Geração Interna de Calor
+subassunto,TRA_CAL_02_005,TRA_CAL_01_006,Lei de Fourier,Lei de Fourier
+subassunto,TRA_CAL_02_006,TRA_CAL_01_007,Paredes Compostas,Paredes Compostas
+assunto,TRA_CAL_03,TRA_CAL_02,Convecção,Convecção
+subassunto,TRA_CAL_03_001,TRA_CAL_02_001,Convecção com Mudança de Fase,Convecção com Mudança de Fase
+subassunto,TRA_CAL_03_002,TRA_CAL_02_002,Convecção Forçada,Convecção Forçada
+subassunto,TRA_CAL_03_003,TRA_CAL_02_003,Convecção Natural,Convecção Natural
+subassunto,TRA_CAL_03_004,TRA_CAL_02_004,"Números de Nusselt, Reynolds e Prandtl","Números de Nusselt, Reynolds e Prandtl"
+assunto,TRA_CAL_04,TRA_CAL_03,Fundamentos de Transferência de Calor,Fundamentos de Transferência de Calor
+subassunto,TRA_CAL_04_002,TRA_CAL_03_001,Mecanismos de Transferência de Calor,Mecanismos de Transferência de Calor
+subassunto,TRA_CAL_04_003,TRA_CAL_03_002,Resistência Térmica,Resistência Térmica
+assunto,TRA_CAL_05,TRA_CAL_04,Radiação Térmica,Radiação Térmica
+subassunto,TRA_CAL_05_001,TRA_CAL_04_001,Corpo Negro e Lei de Stefan-Boltzmann,Corpo Negro e Lei de Stefan-Boltzmann
+subassunto,TRA_CAL_05_002,TRA_CAL_04_002,Fatores de Forma e Troca Radiativa,Fatores de Forma e Troca Radiativa
+subassunto,TRA_CAL_05_003,TRA_CAL_04_003,Propriedades Radiativas,Propriedades Radiativas
+assunto,TRA_CAL_07,TRA_CAL_05,Trocadores de Calor,Trocadores de Calor
+subassunto,TRA_CAL_07_001,TRA_CAL_05_001,Balanço de Energia em Trocadores,Balanço de Energia em Trocadores
+subassunto,TRA_CAL_07_002,TRA_CAL_05_002,Configurações de Trocadores,Configurações de Trocadores
+subassunto,TRA_CAL_07_003,TRA_CAL_05_003,Efetividade e Método NTU,Efetividade e Método NTU
+subassunto,TRA_CAL_07_004,TRA_CAL_05_004,Método da Diferença de Temperatura Média Logarítmica,Método da Diferença de Temperatura Média Logarítmica
