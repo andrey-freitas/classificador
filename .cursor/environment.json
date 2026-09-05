@@ -1,0 +1,4 @@
+{
+  "name": "classificador",
+  "install": "python3 --version && python3 validar_mapeamento.py --somente-validar"
+}
