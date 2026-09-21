@@ -107,7 +107,7 @@ def write_preview() -> None:
 </head>
 <body>
   <h1>Ícones do aplicativo</h1>
-  <p class="lead">Pacote extraído das telas Início, Estudar e Resultados. SVG vetorial + PNG 64/128/256, fundo transparente.</p>
+  <p class="lead">Pacote das telas Início, Estudar e Resultados, com cores saturadas. SVG vetorial e PNG 64/128/256 com fundo transparente.</p>
   <div class="grid">
     {''.join(cards)}
   </div>
